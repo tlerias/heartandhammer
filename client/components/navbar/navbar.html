@@ -5,6 +5,8 @@
   <ul class="tl-nav-links">
     <li ng-repeat="item in menu">
         <a ng-class="{'active': isActive(item.state)}" ui-sref="{{item.state}}">{{item.title}}</a>
+        <i class="fa fa-heart i-link"></i>
     </li>
+
   </ul>
 </div>

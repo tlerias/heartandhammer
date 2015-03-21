@@ -1,20 +1,120 @@
 .tl-img-cover {
     width: 100%;
-
-    .homepage-photo {
-        background: url(../assets/images/phil_2013.jpg);
+      .homepage-photo {
+        background: url(../assets/images/philippines_1.jpg);
         background-repeat: no-repeat;
         width: 100%;
-        height: 700px;
-        background-position: -200px -400px;
+        height: 600px;
+        background-position: 0 -200px;
+        background-size: 100%;
     }
 }
 
+.homepage-photo-2 {
+        background: url(../assets/images/philippines_2.jpg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 600px;
+        background-position: 0 -200px;
+        background-size: 100%;
+    }
 
+.tl-img-left {
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .tl-txt-right {
+      -webkit-transform: translateX(500px);
+       -moz-transform: translateX(500px);
+        -ms-transform: translateX(500px);
+         -o-transform: translateX(500px);
+            transform: translateX(500px);
+    }
+  }
+
+  .tl-txt-right {
+    h1 {
+      color: #FFF;
+      font-weight: 600;
+    }
+
+    p {
+      width: 75%;
+      float: right;
+    }
+    background-color: $hh_orange;
+    color: $hh_gray;
+    text-align: right;
+    padding: 0 25px;
+    height: 600px;
+    position: absolute; 
+    top: 0;
+    left: -700px;   
+    width: 1000px;
+    opacity: 4;    
+    -webkit-transition: all 0.7s ease-out;
+       -moz-transition: all 0.7s ease-out;
+        -ms-transition: all 0.7s ease-out;
+         -o-transition: all 0.7s ease-out;
+            transition: all 0.7s ease-out;
+  }
+
+}
+
+.tl-img-right {
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .tl-txt-left {
+      -webkit-transform: translate(-500px, 0px);
+       -moz-transform: translate(-500px, 0px);
+        -ms-transform: translate(-500px, 0px);
+         -o-transform: translate(-500px, 0px);
+            transform: translate(-500px, 0px);
+    }
+  }
+
+  .tl-txt-left {
+    h1 {
+      color: #FFF;
+      font-weight: 600;
+    }
+
+    p {
+      width: 75%;
+      float: left;
+    }
+    background-color: $hh_red;
+    color: $hh_gray;
+    text-align: left;
+    padding: 0 25px;
+    height: 600px;
+    position: absolute; 
+    top: 0;
+    right: -700px;   
+    width: 1000px;
+    opacity: 1;    
+    -webkit-transition: all 0.4s ease-out;
+       -moz-transition: all 0.4s ease-out;
+        -ms-transition: all 0.4s ease-out;
+         -o-transition: all 0.4s ease-out;
+            transition: all 0.4s ease-out;
+  }
+
+}
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 480px) {
 /* Styles */
+
+  .tl-img-cover {
+    .homepage-photo {
+      height: 500px;
+      background-position: -200px -150px;
+    }
+  }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -28,7 +128,7 @@
   .tl-img-cover {
     .homepage-photo {
       height: 500px;
-      background-position: -700px -680px;
+      background-position: -200px -150px;
     }
   }
 

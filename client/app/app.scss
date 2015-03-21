@@ -4,9 +4,15 @@ $hh_orange: #CC6633;
 $hh_gray: #333333;
 $hh_red: #993333;
 
+html {
+  background-color: #000;
+}
 body {
   /* offset the navbar */
   padding-top: 110px;
+  background-color: #000;
+  font-family: "Raleway", "Helveica Neue", sans-serif;
+
   ul {
     margin: 0;
   }
@@ -21,8 +27,9 @@ body {
 // injector
 @import 'account/login/login.scss';
 @import 'admin/admin.scss';
+@import 'animate.scss';
 @import 'donate/_donate.scss';
 @import 'main/_main.scss';
 @import 'modal/modal.scss';
 @import 'navbar/_navbar.scss';
-// endinjector
+// endinjector;
