@@ -1,0 +1,10 @@
+<div class="tl-navbar-container" ng-controller="NavbarCtrl">
+  <div class="tl-logo-container">
+    <div ui-sref="main" class="tl-navbar-logo"></div>
+  </div>
+  <ul class="tl-nav-links">
+    <li ng-repeat="item in menu">
+        <a ng-class="{'active': isActive(item.state)}" ui-sref="{{item.state}}">{{item.title}}</a>
+    </li>
+  </ul>
+</div>

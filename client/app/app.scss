@@ -1,0 +1,28 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+$fa-font-path: "/bower_components/font-awesome/fonts";
+$hh_orange: #CC6633;
+$hh_gray: #333333;
+$hh_red: #993333;
+
+body {
+  /* offset the navbar */
+  padding-top: 110px;
+  ul {
+    margin: 0;
+  }
+}
+
+@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+@import 'font-awesome/scss/font-awesome';
+
+/*** tl-strap (to not get confused with bootstrap) */
+
+// Component styles are injected through grunt
+// injector
+@import 'account/login/login.scss';
+@import 'admin/admin.scss';
+@import 'donate/_donate.scss';
+@import 'main/_main.scss';
+@import 'modal/modal.scss';
+@import 'navbar/_navbar.scss';
+// endinjector
