@@ -5,16 +5,22 @@ $hh_gray: #333333;
 $hh_red: #993333;
 
 html {
-  background-color: #000;
 }
 body {
   /* offset the navbar */
-  padding-top: 110px;
+  padding: 110px 0 0 0;
   background-color: #000;
-  font-family: "Raleway", "Helveica Neue", sans-serif;
+  font-family: "Helveica Neue", sans-serif;
 
   ul {
     margin: 0;
+  }
+
+  .show {
+    display: inline-block;
+  }
+  .hidden {
+    display: none;
   }
 }
 

@@ -1,136 +1,151 @@
-.tl-img-cover {
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  flex-grow: 1;
+  height: 200px;
+  width: 100%;
+  margin: 5px;
+}
+.homepage-img {
+  background-repeat: no-repeat;
+  height: 200px;
+  background-position: 0;
+  background-size: cover;
+
+}
+#main-img {
+    background-image: url(../assets/images/philippines_1_sm.jpg);
+    background-repeat: no-repeat;
+    height: 200px;
+    background-position: 0;
+    background-size: cover;
+}
+#main-img-upcoming {
+    background-image: url(../assets/images/2012.jpg);
+
+}
+#main-img-2012 {
+    background-image: url(../assets/images/2012_mission.jpg);
+
+}
+#main-img-2013 {
+    background-image: url(../assets/images/2013_mission.jpg);
+
+}
+
+.main-content {
+  position: relative;
+  flex-grow: 1;
+  order: 1;
+  height: 200px;
+  flex-basis: auto;
+  width: 100%;
+  margin: 5px;
+
+  #main-info {
+    /*
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200px;
     width: 100%;
-      .homepage-photo {
-        background: url(../assets/images/philippines_1.jpg);
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 600px;
-        background-position: 0 -200px;
-        background-size: 100%;
-    }
-}
-
-.homepage-photo-2 {
-        background: url(../assets/images/philippines_2.jpg);
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 600px;
-        background-position: 0 -200px;
-        background-size: 100%;
-    }
-
-.tl-img-left {
-  position: relative;
-  overflow: hidden;
-
-  &:hover {
-    .tl-txt-right {
-      -webkit-transform: translateX(500px);
-       -moz-transform: translateX(500px);
-        -ms-transform: translateX(500px);
-         -o-transform: translateX(500px);
-            transform: translateX(500px);
-    }
-  }
-
-  .tl-txt-right {
-    h1 {
-      color: #FFF;
-      font-weight: 600;
-    }
-
-    p {
-      width: 75%;
-      float: right;
-    }
-    background-color: $hh_orange;
-    color: $hh_gray;
-    text-align: right;
-    padding: 0 25px;
-    height: 600px;
-    position: absolute; 
-    top: 0;
-    left: -700px;   
-    width: 1000px;
-    opacity: 4;    
-    -webkit-transition: all 0.7s ease-out;
-       -moz-transition: all 0.7s ease-out;
-        -ms-transition: all 0.7s ease-out;
-         -o-transition: all 0.7s ease-out;
-            transition: all 0.7s ease-out;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-left: 0; */
+    display: none;
   }
 
 }
-
-.tl-img-right {
-  position: relative;
-  overflow: hidden;
-
-  &:hover {
-    .tl-txt-left {
-      -webkit-transform: translate(-500px, 0px);
-       -moz-transform: translate(-500px, 0px);
-        -ms-transform: translate(-500px, 0px);
-         -o-transform: translate(-500px, 0px);
-            transform: translate(-500px, 0px);
-    }
-  }
-
-  .tl-txt-left {
-    h1 {
-      color: #FFF;
-      font-weight: 600;
-    }
-
-    p {
-      width: 75%;
-      float: left;
-    }
-    background-color: $hh_red;
-    color: $hh_gray;
-    text-align: left;
-    padding: 0 25px;
-    height: 600px;
-    position: absolute; 
-    top: 0;
-    right: -700px;   
-    width: 1000px;
-    opacity: 1;    
-    -webkit-transition: all 0.4s ease-out;
-       -moz-transition: all 0.4s ease-out;
-        -ms-transition: all 0.4s ease-out;
-         -o-transition: all 0.4s ease-out;
-            transition: all 0.4s ease-out;
-  }
-
+.main-banner {
+  order: 2;
+  flex-grow: 1;
+  height: 25px;
+  flex-basis: auto;
+  width: 100%;
+  margin: 5px;
+  text-align: center;
+}
+.content-upcoming {
+  order: 3;
+}
+.content-2013 {
+  order: 4;
+}
+.content-2012 {
+  order: 5;
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width : 320px) and (max-width : 480px) {
-/* Styles */
 
-  .tl-img-cover {
-    .homepage-photo {
-      height: 500px;
-      background-position: -200px -150px;
+/* Larger screens */
+@media all and (min-width: 500px) {
+  .flex-container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  }
+  .content {
+    width: 400px;
+    height: 450px;
+  }
+
+  .homepage-img {
+    height: 450px;
+  }
+
+  .main-banner {
+    height: 100px;
+  }
+
+  .main-content {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        #main-info {
+          -webkit-transform: translateX(1500px);
+           -moz-transform: translateX(1500px);
+            -ms-transform: translateX(1500px);
+             -o-transform: translateX(1500px);
+                transform: translateX(1500px);
+        }
+      }
+
+    #main-img {
+      background-image: url(../assets/images/philippines_1.jpg);
+      min-height: 450px;
+    }
+    #main-info {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: -1500px;
+      min-height: 450px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+      -webkit-transition: all 0.4s ease-out;
+      -moz-transition: all 0.4s ease-out;
+      -ms-transition: all 0.4s ease-out;
+      -o-transition: all 0.4s ease-out;
+      transition: all 0.4s ease-out;
+
+      h1 {
+        color: #FFF;
+        font-weight: 600;
+        padding-left: 25px;
+      }
+
+      p {
+        width: 75%;
+      }
     }
   }
 }
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-/* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-/* Styles */
-  .tl-img-cover {
-    .homepage-photo {
-      height: 500px;
-      background-position: -200px -150px;
-    }
-  }
-
-
-}
