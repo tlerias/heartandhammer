@@ -1,0 +1,31 @@
+form {
+  padding: 25px;
+
+  a, a:visited {
+    color: $hh_orange;
+
+    &:hover {
+      text-decoration: none;
+      color: $hh_red;
+    }
+  }
+
+  input {
+    width: 100px;
+  }
+
+
+
+  .donation-container, .donation-label {
+    height: 25px;
+    display: inline-block;
+  }
+}
+
+.form-control {
+
+}
+.inline {
+  display: inline-block;
+  width: 100px;
+}

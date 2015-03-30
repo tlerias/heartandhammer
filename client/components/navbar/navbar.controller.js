@@ -12,7 +12,7 @@ angular.module('heartHammerApp')
       'state': '/'
     },
     {
-      'title': 'Mission 2015',
+      'title': 'Missions',
       'state': '/'
     },
     {

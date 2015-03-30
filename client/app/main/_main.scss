@@ -23,6 +23,7 @@
 
   .content-text {
       position: absolute;
+      overflow: hidden;
       left: 0;
       top: 0;
       height: 200px;
@@ -34,14 +35,30 @@
       padding: 10px;
       color: #FFF;
 
-      p {
-        ul {
-          list-style-type: none;
-          li {
-            font-size: 1.2em;
-          }
+      .stat {
+        font-weight: 600;
+        color: $hh_orange;
+        font-size: 1.5em
+      }
+
+      h2 {
+        font-size: 14px;
+        margin: 0;
+      }
+
+      h3 {
+        font-size: 12px;
+        margin: 2.5px 0;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 5px;
+        li {
+          font-size: 12px;
         }
       }
+      
     }
 }
 .homepage-img {
@@ -99,6 +116,11 @@
 
     h1 {
       font-weight: 600;
+      font-size: 14px;
+    }
+
+    p {
+      display: none;
     }
   }
 
@@ -162,16 +184,16 @@
 
 .donate-btn {
   background-color: $hh_red;
-  height: 100px;
-  width: 300px;
-  padding-top: 25px;
-  margin-top: 100px;
+  height: 50px;
+  width: 150px;
+  padding-top: 15px;
+  margin-top: 15px;
 
   a {
     text-decoration: none;
     color: white;
     font-weight: 600;
-    font-size: 2em;
+    font-size: 1em;
   }
 }
 
@@ -192,6 +214,7 @@
       overflow: hidden;
       &:hover {
         .content-text {
+          background-color: rgba(0, 0, 0, 0.7);
           opacity: 1;
            transition: opacity .25s ease-in-out;
            -moz-transition: opacity .25s ease-in-out;
@@ -203,12 +226,20 @@
       height: 450px;
       padding: 25px;
 
-      p {
-        ul {
-          list-style-type: none;
-          li {
-            font-size:1.3em;
-          }
+      .stat {
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+      h3 {
+        font-size: 24px;
+      }
+
+      ul {
+        list-style-type: none;
+        li {
+          font-size:18px;
         }
       }
     }
@@ -266,10 +297,35 @@
       position: absolute;
       left: 0;
       height: 450px;
+      background-color: rgba(0, 0, 0, 0.7);
       opacity: 0;
       
       h1 {
+        font-size: 28px;
       }
+
+      p {
+        display: block;
+        font-size: 14px;
+    }
+    }
+  }
+
+  .corner-ribbon {
+    width: 200px;
+    line-height: 50px;
+    letter-spacing: 1px;
+  }
+
+  .donate-btn {
+    background-color: $hh_red;
+    height: 100px;
+    width: 300px;
+    padding-top: 25px;
+    margin-top: 100px;
+
+    a {
+      font-size: 2em;
     }
   }
 }
