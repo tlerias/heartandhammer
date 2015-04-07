@@ -1,70 +1,83 @@
-<form action="https://www.paypal.com/cgi-bin/webscr" method="POST">
-  <p>With every donation we will send a custom designed <a href="http://puravidabracelets.com/" alt="Pura Vida">Pura Vida</a> bracelet! </p>
-  <input type="hidden" name="cmd" value="_donations">
-  <input type="hidden" name="business" value="heartandhammerorg@gmail.com">
-  <input type="hidden" name="item_name" value="Pura Vida Bracelet">
-  <input type="hidden" name="undefined_quantity" value="1">
-  <input type="hidden" name="currency_code" value="USD">
-  <input type="hidden" name="lc" value="US">
+<form name="donationsForm" action="https://www.paypal.com/cgi-bin/webscr" method="POST">
+  <div class="info-container">
+    <p>With every donation we will send a custom designed <a href="http://puravidabracelets.com/" target="_blank" alt="Pura Vida">Pura Vida</a> bracelet!
     <div class="form-group">
-      <label class="donation-label">How much would you like to donate?</label>
-      <div class="donation-container">
-          $
-            <input type="input" class="form-control inline" name="amount" value="10">
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label>Email address</label>
-      <input type="email" class="form-control" name="email">
-    </div>
-    <div class="form-group">
-      <label>First Name</label>
-      <input type="input" class="form-control" name="first_name">
-      <label>Last Name</label>
-      <input type="input" class="form-control" name="last_name">
-    </div>
-    <div class="form-group">
-      <h5>Billing Address</h5>
-      <labeline 1</label>
-      <input type="input" class="form-control" name="address1">
-      <label>Address Line 2</label>
-      <input type="input" class="form-control" name="address2">
-      <label>City</label>
-      <input type="input" class="form-control" name="city">
-      <label>State</label>
-      <input type="input" class="form-control" name="state">
-      <label>Zip</label>
-      <input type="input" class="form-control" name="zip">
-    </div>
-    <div class="form-group">
-      <h5>Shipping Address</h5>
       <div class="checkbox">
       <label>
-        Same as billing<input type="checkbox">
+        <input id="send-bracelet"  ng-model="sendBracelet" name="send-bracelet" type="checkbox"> Please send me a free <a href="http://puravidabracelets.com/" target="_blank" alt="Pura Vida">Pura Vida</a> bracelet.
       </label>
-    </div>
-      <div id="shipping_section" class="hidden">
-        <label>Address Line 1</label>
-        <input type="input" class="form-control" name="ship_address1">
-        <label>Address Line 2</label>
-        <input type="input" class="form-control" name="ship_address2">
-        <label>City</label>
-        <input type="input" class="form-control" name="ship_city">
-        <label>State</label>
-        <input type="input" class="form-control" name="ship_state">
-        <label>Zip</label>
-        <input type="input" class="form-control" name="ship_zip">
+    </div></p>
+    <input type="hidden" name="cmd" value="_donations">
+    <input type="hidden" name="business" value="heartandhammerorg@gmail.com">
+    <input type="hidden" name="item_name" value="Pura Vida Bracelet">
+    <input type="hidden" name="undefined_quantity" value="1">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="hidden" name="lc" value="US">
+      <div class="form-group">
+        <label class="donation-label">How much would you like to donate?</label>
+        <div class="donation-container">
+            $
+            <input type="input" class="form-control inline" name="amount" ng-model="donationForm.amount">
+        </div>
+      </div>
+
+<!--       <span class="infographic-caption" ng-show="donationForm.amount > 0">Wondering where your  ${{donationForm.amount}} is going to?</span> -->
+      <div class="error" ng-show="donationForm.amount < 1"> We don't accept any donations under $1.</div> 
+      <div class="rehab" ng-show="donationForm.amount < 1">
+      <a ui-sref="mission">Do you want to learn more about our June 2015 Medical Mission?</a></div>
+      
+      <div id="infographic" ng-show="donationForm.amount > 0">
+<!--         <span class="important-amount">{{donationForm.amount | currency}}</span>  -->
+<!--         <span class="operation subtract"><i class="fa fa-minus"></i></span> $2.50 (pura vida cost)
+        <div class="operation equals"></div>
+          <span class="important-amount total">{{totalCost | currency}}</span> goes directly to buying supplies f -->
+          Your donation of ${{donationForm.amount}} will fund:
+          <span class="important-amount">{{rice}}</span>
+          or
+          <span class="important-amount">{{toiletries}}</span>
+          For our <a ui-sref="mission">2015 medical mission</a>
       </div>
     </div>
+  </div>
+  <div class="input-area">
+    <h4>Please enter your information</h4>
     <div class="form-group">
-      <label>Email</label>
-      <input type="input" class="form-control" name="email">
+      <input type="input" class="form-control" ng-model="donationForm.first_name" placeholder="First Name" name="first_name" required>
+      <input type="input" class="form-control" ng-model="donationForm.last_name" placeholder="Last Name" name="last_name" required>
     </div>
     <div class="form-group">
-      <label>Phone</label>
-      <input type="input" class="form-control" name="night_phone_a">
+      <input type="input" class="form-control" ng-model="donationForm.email" placeholder="Email" name="email" required>
+      <input type="input" class="form-control" ng-model="donationForm.night_phone_a" placeholder="Phone" name="night_phone_a" required>
     </div>
-  
-    <button type="submit" class="btn btn-default">Checkout in Paypal <i class="fa fa-lock"></i></button>
+  <h5>Billing Address</h5>
+  <div class="form-group">
+    <input type="input" class="form-control" ng-model="donationForm.address1" placeholder="Address" name="address1" required>
+    <input type="input" class="form-control" ng-model="donationForm.address2" placeholder="Apt, Unit, etc" name="address2" required>
+  </div>
+  <div class="form-group">
+    <input type="input" class="form-control location" ng-model="donationForm.city" placeholder="City" name="city" required>
+    <input type="input" class="form-control location" ng-model="donationForm.state" placeholder="State" name="state" required>
+    <input type="input" class="form-control location" ng-model="donationForm.zip" placeholder="Zip" name="zip" required>
+    </div>
+    <div id="shipping-container" ng-class="{'hidden': !sendBracelet}">
+      <h5>Shipping Address</h5>
+      <div class="form-group checkbox">
+        <label>
+          Same as billing<input id="shipping-check" type="checkbox">
+        </label>
+      </div>
+      <div id="shipping_section" class="">
+        <div class="form-group">
+          <input type="input" class="form-control" ng-model="donationForm.address1" placeholder="Address" name="address1">
+          <input type="input" ng-model="donationForm.address2" class="form-control" placeholder="Apt, Unit, etc" name="address2">
+        </div>
+        <div class="form-group">
+          <input type="input" ng-model="donationForm.city" class="form-control location" placeholder="City" name="ship_city">
+          <input type="input" ng-model="donationForm.state" class="form-control location" placeholder="State" name="ship_state">
+          <input type="input" class="form-control location" ng-model="donationForm.zip" placeholder="Zip" name="ship_zip">
+        </div>
+      </div>
+  </div>
+    <button type="submit" class="btn btn-default">Checkout in Paypal  <i class="fa fa-lock"></i></button>
+  </div>
 </form>

@@ -1,5 +1,60 @@
 form {
   padding: 25px;
+  text-align: center;
+
+  .info-container {
+    text-align: center;
+    margin-bottom: 15px;
+
+    .infographic-caption {
+      margin: 10px;
+      text-align: left;
+    }
+
+    #infographic {
+      position: relative;
+      padding: 5px;
+      margin: 10px auto;
+      font-size: 14px;
+      font-weight: 600;
+      display: block;
+
+      .important-amount {
+        display: block;
+        font-size: 1.8em;
+        font-weight: 600;
+        color: $hh_red;
+      }
+
+      .total {
+        font-size: 1.3em;
+        font-weight: 600;
+        color: $hh_red;
+        display: inline-block;
+      }
+
+      .operation {
+        color: #000;
+        font-size: 1em;
+      }
+      .subtract {
+        font-size: 12px;
+        margin-left: 25px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .equals {
+        display: block;
+        width: 100px;
+        height: 10px;
+        border-top: 2px solid #000;
+      }
+    }
+  }
+  #shipping-check {
+    padding: 0;
+  }
 
   a, a:visited {
     color: $hh_orange;
@@ -7,25 +62,75 @@ form {
     &:hover {
       text-decoration: none;
       color: $hh_red;
+      cursor: pointer;
     }
   }
 
-  input {
-    width: 100px;
+
+  .donation-container, .form-group {
+    padding-left: 10px;
   }
-
-
-
-  .donation-container, .donation-label {
+  .donation-container,
+  .donation-label{
     height: 25px;
     display: inline-block;
   }
 }
-
 .form-control {
+  width: 45%;
+
 
 }
+.input-area {
+  margin: 0 auto;
+}
+.location {
+  width: 30%;
+}
+
+.form-group {
+  display: block;
+
+  // label {
+  //   padding-right: 25px;
+  //  }
+
+   input {
+    display: inline-block;
+
+   }
+ }
 .inline {
   display: inline-block;
   width: 100px;
+}
+
+.error {
+  color: $hh_gray;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.rehab {
+  color: $hh_gray;
+  font-size: 14px;
+}
+
+
+@media all and (min-width: 500px) {
+  form {
+    .info-container {
+      #infographic {
+        font-size: 18px;
+      }
+      .equals {
+        border-top: 4px solid #000;
+      }
+    }
+
+    .input-area {
+      width:65%;
+    }
+  
+  }
 }
