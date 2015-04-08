@@ -27,25 +27,28 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
 
 
 router.post('/send',function(req,res) {
-  console.log('in the router')
-  var mailOptions = {
+  var ship_address1 = req.body.ship_address1 ? req.body.ship_address1 : 'Same as billing',
+    ship_address2 = req.body.ship_address2 ? req.body.ship_address2 : 'Same as billing',
+    ship_city = req.body.ship_city ? req.body.ship_city : 'Same as billing',
+    ship_state = req.body.ship_state? req.body.ship_state : 'Same as billing',
+    ship_zip = req.body.ship_zip? req.body.ship_zip : 'Same as billing',
+    mailOptions = {
     to : 'heartandhammerorg@gmail.com',
     subject : 'New Heart and Hammer Donation',
     html : '<b> Send this person a bracelet? </b>'+req.body.sendBracelet +
-
-      '<b> Shipping is same as Billing </b>'+req.body.shippingIsBilling +
+      '<br><b>Shipping is same as Billing </b>'+req.body.shippingIsBilling +
       '<br><b>donation amount: </b> '+req.body.amount +
       '<br><b>First Name: </b> '+req.body.first_name +
       '<br><b>Last Name: </b> '+req.body.last_name +
-      '<br><b>Address Line 1: </b> '+req.body.ship_address1 +
-      '<br><b>Address Line 2: </b> '+req.body.ship_address2 +
-      '<br><b>City: </b> '+req.body.ship_city +
-      '<br><b>State: </b> '+req.body.ship_state +
-      '<br><b>Zip: </b> '+req.body.ship_zip +
+      '<br><b>Address Line 1: </b> '+ ship_address1 +
+      '<br><b>Address Line 2: </b> '+ ship_address2 +
+      '<br><b>City: </b> '+ ship_city +
+      '<br><b>State: </b> '+ ship_state +
+      '<br><b>Zip: </b> '+ ship_zip +
       '<br><b>Email: </b> '+req.body.email +
       '<br><b>Phone: </b> '+req.body.night_phone_a
   } 
-  console.log(req.body);
+
   smtpTransport.sendMail(mailOptions, function(error, response){
     if (error) {
       console.log(error);
