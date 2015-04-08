@@ -29,7 +29,7 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
 router.post('/send',function(req,res) {
   console.log('in the router')
   var mailOptions = {
-    to : req.body.business,
+    to : 'heartandhammerorg@gmail.com',
     subject : 'New Heart and Hammer Donation',
     html : '<b> Send this person a bracelet? </b>'+req.body.sendBracelet +
 
