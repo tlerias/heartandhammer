@@ -34,7 +34,7 @@ router.post('/send',function(req,res) {
     html : '<b> Send this person a bracelet? </b>'+req.body.sendBracelet +
 
       '<b> Shipping is same as Billing </b>'+req.body.shippingIsBilling +
-      '<br><b>item: </b> '+req.body.item_name +
+      '<br><b>donation amount: </b> '+req.body.amount +
       '<br><b>First Name: </b> '+req.body.first_name +
       '<br><b>Last Name: </b> '+req.body.last_name +
       '<br><b>Address Line 1: </b> '+req.body.ship_address1 +
