@@ -43,22 +43,22 @@
   <div class="input-area">
     <h4>Please enter your information</h4>
     <div class="form-group">
-      <input type="input" class="form-control" ng-model="donationForm.first_name" placeholder="First Name" name="first_name" required>
-      <input type="input" class="form-control" ng-model="donationForm.last_name" placeholder="Last Name" name="last_name" required>
+      <input type="input" class="form-control" ng-model="donationForm.first_name" placeholder="First Name*" name="first_name" required>
+      <input type="input" class="form-control" ng-model="donationForm.last_name" placeholder="Last Name*" name="last_name" required>
     </div>
     <div class="form-group">
-      <input type="input" class="form-control" ng-model="donationForm.email" placeholder="Email" name="email" required>
-      <input type="input" class="form-control" ng-model="donationForm.night_phone_a" placeholder="Phone" name="night_phone_a" required>
+      <input type="input" class="form-control" ng-model="donationForm.email" placeholder="Email*" name="email" required>
+      <input type="input" class="form-control" ng-model="donationForm.night_phone_a" placeholder="Phone*" name="night_phone_a" required>
     </div>
   <h5>Billing Address</h5>
   <div class="form-group">
-    <input type="input" class="form-control" ng-model="donationForm.address1" placeholder="Address" name="address1" required>
+    <input type="input" class="form-control" ng-model="donationForm.address1" placeholder="Address*" name="address1" required>
     <input type="input" class="form-control" ng-model="donationForm.address2" placeholder="Apt, Unit, etc" name="address2">
   </div>
   <div class="form-group">
-    <input type="input" class="form-control location" ng-model="donationForm.city" placeholder="City" name="city" required>
-    <input type="input" class="form-control location" ng-model="donationForm.state" placeholder="State" name="state" required>
-    <input type="input" class="form-control location" ng-model="donationForm.zip" placeholder="Zip" name="zip" required>
+    <input type="input" class="form-control location" ng-model="donationForm.city" placeholder="City*" name="city" required>
+    <input type="input" class="form-control location" ng-model="donationForm.state" placeholder="State*" name="state" required>
+    <input type="input" class="form-control location" ng-model="donationForm.zip" placeholder="Zip*" name="zip" required>
     </div>
     <div id="shipping-container" ng-class="{'hidden': !donationForm.sendBracelet}">
       <h5>Shipping Address</h5>
@@ -69,17 +69,19 @@
       </div>
       <div id="shipping_section" class="">
         <div class="form-group">
-          <input type="input" class="form-control" ng-model="donationForm.ship_address1" placeholder="Address" name="ship_address1" ng-required="!donationForm.shippingIsBilling">
+          <input type="input" class="form-control" ng-model="donationForm.ship_address1" placeholder="Address*" name="ship_address1" ng-required="!donationForm.shippingIsBilling">
           <input type="input" ng-model="donationForm.ship_address2" class="form-control" placeholder="Apt, Unit, etc" name="ship_address2">
         </div>
         <div class="form-group">
-          <input type="input" ng-model="donationForm.ship_city" class="form-control location" placeholder="City" name="ship_city" ng-required="!donationForm.shippingIsBilling">
-          <input type="input" ng-model="donationForm.ship_state" class="form-control location" placeholder="State" name="ship_state" ng-required="!donationForm.shippingIsBilling">
-          <input type="input" class="form-control location" ng-model="donationForm.ship_zip" placeholder="Zip" name="ship_zip" ng-required="!donationForm.shippingIsBilling">
+          <input type="input" ng-model="donationForm.ship_city" class="form-control location" placeholder="City*" name="ship_city" ng-required="!donationForm.shippingIsBilling">
+          <input type="input" ng-model="donationForm.ship_state" class="form-control location" placeholder="State*" name="ship_state" ng-required="!donationForm.shippingIsBilling">
+          <input type="input" class="form-control location" ng-model="donationForm.ship_zip" placeholder="Zip*" name="ship_zip" ng-required="!donationForm.shippingIsBilling">
         </div>
       </div>
   </div>
     <button type="submit" ng-disabled="donationsForm.$error.required" ng-click='submitForm()'class="btn btn-default">Checkout in Paypal  <i class="fa fa-lock"></i></button>
+    <br/>
+    <br/>
     <p><a href="mailto:heartandhammerorg@gmail.com?subject=Donation&body=I would like to make a donation but I'm having issues on the website.">Having trouble donating?</a></p>
   </div>
 </form>
