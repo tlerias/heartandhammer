@@ -79,6 +79,7 @@
         </div>
       </div>
   </div>
-    <button type="submit" ng-click='submitForm()'class="btn btn-default">Checkout in Paypal  <i class="fa fa-lock"></i></button>
+    <button type="submit" ng-disabled="donationsForm.$error.required" ng-click='submitForm()'class="btn btn-default">Checkout in Paypal  <i class="fa fa-lock"></i></button>
+    <a href="email:heartandhammerorg@gmail.com">Having trouble donating?</a>
   </div>
 </form>

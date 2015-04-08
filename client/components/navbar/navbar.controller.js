@@ -14,10 +14,6 @@ angular.module('heartHammerApp')
     {
       'title': 'Missions',
       'state': '/'
-    },
-    {
-      'title': 'Connect',
-      'state': '/'
     }];
 
     $scope.isActive = function(route) {

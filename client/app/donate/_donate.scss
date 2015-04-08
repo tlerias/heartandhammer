@@ -88,6 +88,7 @@ form {
   width: 30%;
 }
 
+
 .form-group {
   display: block;
 
@@ -97,6 +98,11 @@ form {
 
    input {
     display: inline-block;
+
+    &.ng-dirty.ng-invalid-required {
+      background-color: $hh_red;
+      color: #FFF;
+    }
 
    }
  }
