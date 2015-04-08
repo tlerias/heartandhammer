@@ -22,6 +22,16 @@ angular.module('heartHammerApp', [
         url: '/donate',
         templateUrl: 'app/donate/donate.html',
         controller: 'DonateCtrl'
+      })
+      .state('donate-success', {
+        url: '/donate',
+        templateUrl: 'app/donate/donateSuccess.html',
+        controller: 'DonateCtrl'
+      })
+      .state('donate-error', {
+        url: '/donate',
+        templateUrl: 'app/donate/donateError.html',
+        controller: 'DonateCtrl'
       });
 
     $locationProvider.html5Mode(true);

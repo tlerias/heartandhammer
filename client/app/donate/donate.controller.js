@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('heartHammerApp')
-  .controller('DonateCtrl', function ($scope, $http) {
+  .controller('DonateCtrl', function ($scope, $state, $http) {
 
     $scope.donationForm = {
-      amount: 10
+      amount: 10,
+      sendBracelet: true
     };
-
     $scope.$watch('donationForm.amount', function () {
       $scope.totalCost = $scope.donationForm.amount - 2.50;
       $scope.riceAmount = $scope.totalCost / 5 < 0 ? 'None' : $scope.totalCost / 5;
@@ -29,19 +29,29 @@ angular.module('heartHammerApp')
       }
     });
 
-    $scope.goToPaypal = function () {
-      $http.post('https://www.paypal.com/cgi-bin/webscr', {msg:'hello word!'}).
-        success(function(data, status, headers, config) {
-          console.log('success')
-        }).
-        error(function(data, status, headers, config) {
-          console.log('error')
-        });
-    }
+    // $scope.goToPaypal = function () {
+    //   $http.post('https://www.paypal.com/cgi-bin/webscr', $scope.donationForm).
+    //     success(function(data, status, headers, config) {
+    //       console.log('success')
+    //     }).
+    //     error(function(data, status, headers, config) {
+    //       console.log('error')
+    //     });
+    // }
 
     $('#shipping-check').on('click', function () {
       $("#shipping_section").toggleClass('hidden');
     });
 
-    $scope.sendBracelet = true;
+    var from,to,subject,text;
+    $scope.submitForm = function () {
+      $http.post('/api/donations/send', $scope.donationForm)
+      .success(function(data, headers) {
+        $state.go('donate-success');
+      })
+      .error(function(data, headers) {
+        $state.go('donate-error');
+
+      });
+    };
   });
