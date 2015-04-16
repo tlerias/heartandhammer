@@ -18,18 +18,31 @@ angular.module('heartHammerApp', [
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
       })
+      .state('about', {
+        url: '/donate',
+        templateUrl: 'app/about/about.html',
+        controller: 'AboutCtrl'
+      })
+      .state('missions', {
+        url: '/missions',
+        templateUrl: 'app/missions/missions.html',
+        controller: 'MissionsCtrl',
+        params: {
+          scrollTo: ''
+        }
+      })
       .state('donate', {
         url: '/donate',
         templateUrl: 'app/donate/donate.html',
         controller: 'DonateCtrl'
       })
       .state('donate-success', {
-        url: '/donate',
+        url: '/donate/thanks',
         templateUrl: 'app/donate/donateSuccess.html',
         controller: 'DonateCtrl'
       })
       .state('donate-error', {
-        url: '/donate',
+        url: '/donate/error',
         templateUrl: 'app/donate/donateError.html',
         controller: 'DonateCtrl'
       });

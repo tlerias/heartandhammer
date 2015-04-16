@@ -1,0 +1,20 @@
+#about-us-img {
+  background: url('http://res.cloudinary.com/hgahynedu/image/upload/v1429143438/gabby_ts2msw.jpg');
+  height: 200px;
+  width: 275px;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.about-container {
+  text-align: center;
+  padding: 20px;
+}
+
+@media all and (min-width: 500px) {
+  
+  .about-container {
+    padding: 50px;
+  }
+}

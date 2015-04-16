@@ -22,6 +22,50 @@ body {
   .hidden {
     display: none;
   }
+
+  a, a:visited {
+    color: $hh_orange;
+
+    &:hover {
+      text-decoration: none;
+      color: $hh_red;
+      cursor: pointer;
+    }
+  }
+
+  .corner-ribbon {
+    width: 200px;
+    background: $hh_red;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 1px;
+    color: #f0f0f0;
+    top: 25px;
+    right: -50px;
+    left: auto;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+
+  .main-div {
+    padding: 25px 50px;
+    text-align: center;
+    .exclamation {
+      color: $hh_red;
+      font-weight: 600;
+    }
+  }
+}
+
+@media all and (min-width: 500px) {
+  
+   .corner-ribbon {
+    width: 200px;
+    line-height: 50px;
+    letter-spacing: 1px;
+  }
 }
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
@@ -31,11 +75,13 @@ body {
 
 // Component styles are injected through grunt
 // injector
+@import 'about/_about.scss';
 @import 'account/login/login.scss';
 @import 'admin/admin.scss';
 @import 'animate.scss';
 @import 'donate/_donate.scss';
 @import 'main/_main.scss';
+@import 'missions/_missions.scss';
 @import 'modal/modal.scss';
 @import 'navbar/_navbar.scss';
 // endinjector;

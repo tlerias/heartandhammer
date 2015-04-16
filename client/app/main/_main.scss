@@ -167,21 +167,6 @@
   order: 5;
 }
 
-.corner-ribbon {
-  width: 200px;
-  background: $hh_red;
-  position: absolute;
-  text-align: center;
-  line-height: 50px;
-  letter-spacing: 1px;
-  color: #f0f0f0;
-  top: 25px;
-  right: -50px;
-  left: auto;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-
 .donate-btn {
   background-color: $hh_red;
   height: 50px;
@@ -189,11 +174,17 @@
   padding-top: 15px;
   margin-top: 15px;
 
-  a {
+a, a:visited {
     text-decoration: none;
     color: white;
     font-weight: 600;
     font-size: 1em;
+
+    &:hover {
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+    }
   }
 }
 
@@ -311,11 +302,6 @@
     }
   }
 
-  .corner-ribbon {
-    width: 200px;
-    line-height: 50px;
-    letter-spacing: 1px;
-  }
 
   .donate-btn {
     background-color: $hh_red;

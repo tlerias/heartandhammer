@@ -9,11 +9,11 @@ angular.module('heartHammerApp')
     },
     {
       'title': 'Who We Are',
-      'state': '/'
+      'state': 'about'
     },
     {
       'title': 'Missions',
-      'state': '/'
+      'state': 'missions'
     }];
 
     $scope.isActive = function(route) {

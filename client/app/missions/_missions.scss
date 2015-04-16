@@ -1,0 +1,109 @@
+
+#mission_2012_img,
+#mission_2013_img,
+#mission_2015_img {
+  display: inline-block;
+  height: 125px;
+  width: 200px;
+}
+#mission_2012_img {
+  background: url('http://res.cloudinary.com/hgahynedu/image/upload/v1429143436/2012_PMAA_01_b3ajmc.jpg');
+  background-size: 200px;
+  background-repeat: no-repeat;
+}
+#mission_2013_img {
+  background: url('http://res.cloudinary.com/hgahynedu/image/upload/v1429143439/2013_PMAA_01_snmf9z.jpg');
+  background-size: 200px;
+  background-repeat: no-repeat;
+}
+#mission_2015_img {
+  background: url('http://res.cloudinary.com/hgahynedu/image/upload/v1429143438/upcoming_m6aagw.jpg');
+  background-size: 200px;
+  background-repeat: no-repeat;
+}
+
+.mission-container {
+  text-align: center;
+  .mission {
+    box-sizing: border-box;
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    margin: 15px 15px 25px 15px;
+    border-left: thick solid $hh_gray;
+    border-top: thick solid $hh_gray;
+    border-right: thick solid $hh_gray;
+    border-bottom: thick solid $hh_orange;
+
+    .corner-ribbon-container {
+      position: absolute;
+      display: hidden;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      .opaque {
+        opacity: 0;
+      }
+    }
+
+
+
+  }
+
+
+
+  h4 {
+    color: $hh_red;
+    font-weight: 900;
+  }
+
+  .mission-description {
+    width: 100%;
+    color: $hh_gray;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  a.anchor {
+    display: block;
+    position: relative;
+    top: -110px;
+    visibility: hidden;
+  }
+}
+
+@media all and (min-width: 500px) {
+  
+  #mission_2012_img,
+  #mission_2013_img,
+  #mission_2015_img {
+    display: inline-block;
+    background-size: 100%;
+    height: 300px;
+    width: 500px;
+    margin: 0 50px;
+  }
+
+  .mission-container {
+    text-align: center;
+    .mission {
+      .corner-ribbon-container {
+        .opaque {
+          opacity: 1;
+        }
+      }
+
+      .mission-description {
+        vertical-align: top;
+        margin: 0 50px;
+        height: 100%;
+        display: inline-block;
+        width: 500px;
+        text-align: left;
+      }
+    }
+  }
+}

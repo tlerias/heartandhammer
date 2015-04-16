@@ -25,7 +25,7 @@
 <!--       <span class="infographic-caption" ng-show="donationForm.amount > 0">Wondering where your  ${{donationForm.amount}} is going to?</span> -->
       <div class="error" ng-show="donationForm.amount < 1"> We don't accept any donations under $1.</div> 
       <div class="rehab" ng-show="donationForm.amount < 1">
-      <a ui-sref="mission">Do you want to learn more about our June 2015 Medical Mission?</a></div>
+      <a ui-sref="missions({scrollTo: 'mission_2015_a'})">Do you want to learn more about our June 2015 Medical Mission?</a></div>
       
       <div id="infographic" ng-show="donationForm.amount > 0">
 <!--         <span class="important-amount">{{donationForm.amount | currency}}</span>  -->
@@ -36,7 +36,7 @@
           <span class="important-amount">{{rice}}</span>
           or
           <span class="important-amount">{{toiletries}}</span>
-          For our <a ui-sref="mission">2015 medical mission</a>
+          For our <a ui-sref="missions({scrollTo: 'mission_2015_a'})">2015 medical mission</a>
       </div>
     </div>
   </div>
@@ -69,13 +69,13 @@
       </div>
       <div id="shipping_section" class="">
         <div class="form-group">
-          <input type="input" class="form-control" ng-model="donationForm.ship_address1" placeholder="Address*" name="ship_address1" ng-required="!donationForm.shippingIsBilling">
+          <input type="input" class="form-control" ng-model="donationForm.ship_address1" placeholder="Address*" name="ship_address1" ng-required="donationForm.sendBracelet && !donationForm.shippingIsBilling">
           <input type="input" ng-model="donationForm.ship_address2" class="form-control" placeholder="Apt, Unit, etc" name="ship_address2">
         </div>
         <div class="form-group">
-          <input type="input" ng-model="donationForm.ship_city" class="form-control location" placeholder="City*" name="ship_city" ng-required="!donationForm.shippingIsBilling">
-          <input type="input" ng-model="donationForm.ship_state" class="form-control location" placeholder="State*" name="ship_state" ng-required="!donationForm.shippingIsBilling">
-          <input type="input" class="form-control location" ng-model="donationForm.ship_zip" placeholder="Zip*" name="ship_zip" ng-required="!donationForm.shippingIsBilling">
+          <input type="input" ng-model="donationForm.ship_city" class="form-control location" placeholder="City*" name="ship_city" ng-required="donationForm.sendBracelet &&  !donationForm.shippingIsBilling">
+          <input type="input" ng-model="donationForm.ship_state" class="form-control location" placeholder="State*" name="ship_state" ng-required="donationForm.sendBracelet &&  !donationForm.shippingIsBilling">
+          <input type="input" class="form-control location" ng-model="donationForm.ship_zip" placeholder="Zip*" name="ship_zip" ng-required="donationForm.sendBracelet && !donationForm.shippingIsBilling">
         </div>
       </div>
   </div>
