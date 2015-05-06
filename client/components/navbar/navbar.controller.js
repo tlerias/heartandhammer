@@ -4,8 +4,8 @@ angular.module('heartHammerApp')
   .controller('NavbarCtrl', function ($scope, $state) {
     $scope.menu = [
     {
-      'title': 'Donate Now',
-      'state': 'donate'
+      'title': 'Home',
+      'state': 'main'
     },
     {
       'title': 'Who We Are',
@@ -14,6 +14,10 @@ angular.module('heartHammerApp')
     {
       'title': 'Missions',
       'state': 'missions'
+    },
+    {
+      'title': 'Donate Now',
+      'state': 'donate'
     }];
 
     $scope.isActive = function(route) {

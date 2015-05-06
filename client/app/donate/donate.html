@@ -4,7 +4,7 @@
     <div class="form-group">
       <div class="checkbox">
       <label>
-        <input id="send-bracelet"  ng-model="donationForm.sendBracelet" name="send-bracelet" type="checkbox"> Please send me a free <a href="http://puravidabracelets.com/" target="_blank" alt="Pura Vida">Pura Vida</a> bracelet.
+        <input id="send-bracelet"  ng-model="donationForm.sendBracelet" name="send-bracelet" type="checkbox"> Please send me a <a href="http://puravidabracelets.com/" target="_blank" alt="Pura Vida">Pura Vida</a> bracelet.
       </label>
     </div></p>
     <input type="hidden" name="cmd" value="_donations">
@@ -25,7 +25,7 @@
 <!--       <span class="infographic-caption" ng-show="donationForm.amount > 0">Wondering where your  ${{donationForm.amount}} is going to?</span> -->
       <div class="error" ng-show="donationForm.amount < 1"> We don't accept any donations under $1.</div> 
       <div class="rehab" ng-show="donationForm.amount < 1">
-      <a ui-sref="missions({scrollTo: 'mission_2015_a'})">Do you want to learn more about our June 2015 Medical Mission?</a></div>
+      <a ui-sref="missions({scrollTo: 'mission_2015_a'})">Do you want to learn more about our June 2015 Humanitarian Mission?</a></div>
       
       <div id="infographic" ng-show="donationForm.amount > 0">
 <!--         <span class="important-amount">{{donationForm.amount | currency}}</span>  -->
@@ -36,7 +36,7 @@
           <span class="important-amount">{{rice}}</span>
           or
           <span class="important-amount">{{toiletries}}</span>
-          For our <a ui-sref="missions({scrollTo: 'mission_2015_a'})">2015 medical mission</a>
+          For our <a ui-sref="missions({scrollTo: 'mission_2015_a'})">2015 humanitarian mission</a>
       </div>
     </div>
   </div>
