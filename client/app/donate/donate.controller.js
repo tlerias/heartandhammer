@@ -9,21 +9,21 @@ angular.module('heartHammerApp')
     };
     $scope.$watch('donationForm.amount', function () {
       $scope.totalCost = $scope.donationForm.amount;
-      $scope.riceAmount = $scope.totalCost / 10 < 0 ? 'None' : $scope.totalCost / 10;
-      $scope.toiletryAmount = $scope.totalCost / 20 < 0 ? 'None' : $scope.totalCost / 20;
+      $scope.riceAmount = $scope.totalCost / 0.55 < 0 ? 'None' : $scope.totalCost / 0.55;
+      $scope.toiletryAmount = $scope.totalCost / 5 < 0 ? 'None' : $scope.totalCost / 5;
 
       if ($scope.riceAmount > 1) {
-        $scope.rice = Math.round($scope.riceAmount * 18) + ' lbs of rice'
+        $scope.rice = Math.round($scope.riceAmount) + ' lbs of rice'
       } else if ($scope.riceAmount === 1) {
-        $scope.rice = Math.round($scope.riceAmount * 18) + ' lbs of rice'
+        $scope.rice = Math.round($scope.riceAmount) + ' lbs of rice'
       } else {
         $scope.rice = 'a partial bag of rice'
       }
 
       if ($scope.toiletryAmount > 1) {
-        $scope.toiletries = Math.round($scope.toiletryAmount * 4) + ' food packs'
+        $scope.toiletries = Math.round($scope.toiletryAmount) + ' food packs'
       } else if ($scope.toiletryAmount === 1) {
-        $scope.toiletries = Math.round($scope.toiletryAmount * 4) + ' food packs'
+        $scope.toiletries = Math.round($scope.toiletryAmount) + ' food pack'
       } else {
         $scope.toiletries = 'a partial food pack'
       }

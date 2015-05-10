@@ -19,7 +19,7 @@ angular.module('heartHammerApp', [
         controller: 'MainCtrl'
       })
       .state('about', {
-        url: '/donate',
+        url: '/about',
         templateUrl: 'app/about/about.html',
         controller: 'AboutCtrl'
       })
@@ -85,5 +85,9 @@ angular.module('heartHammerApp', [
           $location.path('/login');
         }
       });
+    });
+
+    $rootScope.$on('$stateChangeSuccess', function() {
+       document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
   });

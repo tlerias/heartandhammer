@@ -41,6 +41,10 @@
         font-size: 1.5em
       }
 
+      .btn-2015 {
+        display: none;
+      }
+
       h2 {
         font-size: 14px;
         margin: 0;
@@ -217,6 +221,21 @@ a, a:visited {
       opacity: 0;
       height: 450px;
       padding: 25px;
+
+      .btn-2015 {
+        display: block;
+        background-color: $hh_red;
+        height: 75px;
+        width: 250px;
+        padding-top: 25px;
+        margin: 25px auto 0 auto;
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: 600;
+        &:hover {
+          color: #FFF;
+        }
+      }
 
       .stat {
       }

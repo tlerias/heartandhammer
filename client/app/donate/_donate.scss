@@ -1,9 +1,7 @@
 form {
   padding: 25px;
-  text-align: center;
 
   .info-container {
-    text-align: center;
     margin-bottom: 15px;
 
     .infographic-caption {
@@ -18,6 +16,7 @@ form {
       font-size: 14px;
       font-weight: 600;
       display: block;
+      text-align: center;
 
       .important-amount {
         display: block;
@@ -49,6 +48,14 @@ form {
         width: 100px;
         height: 10px;
         border-top: 2px solid #000;
+      }
+    }
+
+    #food-pack {
+      padding-top: 15px;
+      ul {
+        list-style-type: none;
+        padding: 0;
       }
     }
   }
@@ -125,9 +132,33 @@ form {
 
 @media all and (min-width: 500px) {
   form {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;  
+    flex-direction: row;
+    justify-content: center;
     .info-container {
+      order: 1;
       #infographic {
         font-size: 18px;
+        margin-bottom: 0;
+        padding-top: 25px;
+        text-align: center;
+
+      }
+      #infographic, #food-pack {
+        background-color: #FFFACD;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-right: 50px;
+
+      }
+
+      #food-pack {
+        margin-top: 0;
+        padding-bottom: 25px;
       }
       .equals {
         border-top: 4px solid #000;
@@ -135,7 +166,9 @@ form {
     }
 
     .input-area {
-      width:65%;
+      //width:65%;
+      order: 2;
+      padding: 0 25px 0 25px;
     }
   
   }
