@@ -1,4 +1,4 @@
-<form name="donationsForm" action="https://www.paypal.com/cgi-bin/webscr" target="_blank" method="POST">
+<form name="donationsForm" action="https://www.paypal.com/cgi-bin/webscr" target="_blank" method="POST" novalidate>
   <div class="info-container">
     <p>With every donation we will send a custom designed <a href="http://puravidabracelets.com/" target="_blank" alt="Pura Vida">Pura Vida</a> bracelet!
     <div class="form-group">
@@ -38,7 +38,7 @@
           <span class="important-amount">{{toiletries}}</span>
           For our <a ui-sref="missions({scrollTo: 'mission_2015_a'})">2015 humanitarian mission</a> -->
           All donations are tax deductible and go directly to the people in need. Our volunteers pay for their own flights and means of traveling.
-          <h2>$100 buys 16 Food Packs and 35lbs of rice</h2>
+          <h2><span class="important-amount">$100 </span> buys <span class="important-amount">16</span> Food Packs and <span class="important-amount">35 </span> lbs of rice</h2>
       </div>
       <div id="food-pack">
         <div class="food-pack-header"><h4>What's in the "Food Pack"?</h4></div>
@@ -98,9 +98,13 @@
         </div>
       </div>
   </div>
-    <button type="submit" ng-click='submitForm()'class="btn btn-default">Checkout in Paypal  <i class="fa fa-lock"></i></button>
-    <div class="error" ng-show="invalidNumberInput(donationsForm)"> Please enter a valid donation.</div> 
+    <button type="submit" ng-show="donationForm.amount" ng-click='submitForm()' class="btn btn-default">Checkout in Paypal  <i class="fa fa-lock"></i></button>
     <br/>
+    <div class="error" ng-show="invalidNumberInput(donationsForm) || !donationForm.amount"> Please enter a valid donation.</div> 
+
+    <br/>
+    <p><i class="fa fa-info-circle"></i>  <span class="error">Worried about not having a PayPal Account? </span> 
+    <p>That's okay, you can just donate using your credit card in PayPal without signing up.</p></p>
     <br/>
     <p><a href="mailto:heartandhammerorg@gmail.com?subject=Donation&body=I would like to make a donation but I'm having issues on the website.">Having trouble donating?</a></p>
   </div>

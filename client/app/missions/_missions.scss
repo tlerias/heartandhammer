@@ -114,6 +114,7 @@
     height: 300px;
     width: 40%;
     margin: 0 50px;
+    vertical-align: middle;
   }
 
   .mission-container {
@@ -136,7 +137,7 @@
       }
 
       .mission-description {
-        vertical-align: top;
+        vertical-align: middle;
         margin: 0 50px;
         height: 100%;
         display: inline-block;

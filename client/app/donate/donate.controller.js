@@ -41,6 +41,7 @@ angular.module('heartHammerApp')
 
     $scope.invalidNumberInput = function (form) {
       if (form.$dirty && ($scope.donationForm.amount < 1 || typeof $scope.donationForm.amount === 'undefined' )) {
+
         return true
       } else {
         return false;
@@ -61,8 +62,6 @@ angular.module('heartHammerApp')
 
     var from,to,subject,text;
     $scope.submitForm = function () {
-
-      
       $http.post('/api/donations/send', $scope.donationForm)
       .success(function(data, headers) {
         $state.go('donate-success');

@@ -19,8 +19,8 @@ form {
       text-align: center;
 
       .important-amount {
-        display: block;
-        font-size: 1.8em;
+        display: inline-block;
+        font-size: 1.2em;
         font-weight: 600;
         color: $hh_red;
       }
@@ -118,8 +118,13 @@ form {
   width: 100px;
 }
 
-.error {
+.error, .number-important {
   color: $hh_red;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.fa-info-circle  {
   font-weight: 600;
   font-size: 18px;
 }
@@ -129,6 +134,11 @@ form {
   font-size: 14px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
 
 @media all and (min-width: 500px) {
   form {
@@ -171,5 +181,10 @@ form {
       padding: 0 25px 0 25px;
     }
   
+  }
+  img {
+    max-width: 80%;
+    height: auto;
+    width: auto\9; /* ie8 */
   }
 }
