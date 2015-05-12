@@ -23,20 +23,22 @@
       </div>
 
 <!--       <span class="infographic-caption" ng-show="donationForm.amount > 0">Wondering where your  ${{donationForm.amount}} is going to?</span> -->
-      <div class="error" ng-show="donationForm.amount < 1"> We don't accept any donations under $1.</div> 
-      <div class="rehab" ng-show="donationForm.amount < 1">
+      <div class="error" ng-show="invalidNumberInput(donationsForm)"> We don't accept any donations under $1.</div> 
+      <div class="rehab" ng-show="invalidNumberInput(donationsForm)">
       <a ui-sref="missions({scrollTo: 'mission_2015_a'})">Do you want to learn more about our June 2015 Humanitarian Mission?</a></div>
-      
-      <div id="infographic" ng-show="donationForm.amount > 0">
+      <div id="infographic">
+      <!-- <div id="infographic" ng-show="donationForm.amount > 0"> -->
 <!--         <span class="important-amount">{{donationForm.amount | currency}}</span>  -->
 <!--         <span class="operation subtract"><i class="fa fa-minus"></i></span> $2.50 (pura vida cost)
         <div class="operation equals"></div>
           <span class="important-amount total">{{totalCost | currency}}</span> goes directly to buying supplies f -->
-          Your donation of ${{donationForm.amount}} will fund:
+<!--           Your donation of ${{donationForm.amount}} will fund:
           <span class="important-amount">{{rice}}</span>
           <span class="important-amount">or</span>
           <span class="important-amount">{{toiletries}}</span>
-          For our <a ui-sref="missions({scrollTo: 'mission_2015_a'})">2015 humanitarian mission</a>
+          For our <a ui-sref="missions({scrollTo: 'mission_2015_a'})">2015 humanitarian mission</a> -->
+          All donations are tax deductible and go directly to the people in need. Our volunteers pay for their own flights and means of traveling.
+          <h2>$100 buys 16 Food Packs and 35lbs of rice</h2>
       </div>
       <div id="food-pack">
         <div class="food-pack-header"><h4>What's in the "Food Pack"?</h4></div>
@@ -96,7 +98,8 @@
         </div>
       </div>
   </div>
-    <button type="submit" ng-disabled="donationsForm.$error.required" ng-click='submitForm()'class="btn btn-default">Checkout in Paypal  <i class="fa fa-lock"></i></button>
+    <button type="submit" ng-click='submitForm()'class="btn btn-default">Checkout in Paypal  <i class="fa fa-lock"></i></button>
+    <div class="error" ng-show="invalidNumberInput(donationsForm)"> Please enter a valid donation.</div> 
     <br/>
     <br/>
     <p><a href="mailto:heartandhammerorg@gmail.com?subject=Donation&body=I would like to make a donation but I'm having issues on the website.">Having trouble donating?</a></p>

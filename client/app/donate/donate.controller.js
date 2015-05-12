@@ -4,7 +4,7 @@ angular.module('heartHammerApp')
   .controller('DonateCtrl', function ($scope, $state, $http) {
 
     $scope.donationForm = {
-      amount: 10,
+      amount: '',
       sendBracelet: true
     };
     $scope.$watch('donationForm.amount', function () {
@@ -39,12 +39,30 @@ angular.module('heartHammerApp')
     //     });
     // }
 
+    $scope.invalidNumberInput = function (form) {
+      if (form.$dirty && ($scope.donationForm.amount < 1 || typeof $scope.donationForm.amount === 'undefined' )) {
+        return true
+      } else {
+        return false;
+      }
+    };
+
+    // $scope.$watch('amount', function () {
+    //   if ($scope.donationForm.amount.$dirty && donationForm.amount < 1) {
+    //     return true
+    //   } else {
+    //     return false;
+    //   }
+    // });
+
     $('#shipping-check').on('click', function () {
       $("#shipping_section").toggleClass('hidden');
     });
 
     var from,to,subject,text;
     $scope.submitForm = function () {
+
+      
       $http.post('/api/donations/send', $scope.donationForm)
       .success(function(data, headers) {
         $state.go('donate-success');
