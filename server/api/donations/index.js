@@ -37,6 +37,13 @@ router.post('/send',function(req,res) {
     subject : 'New Heart and Hammer Donation: ' + needs_to_ship,
     html : '<h2><b>Send this person a bracelet? </b>'+req.body.sendBracelet + '</h2>' +
       '<br><b>donation amount: </b> '+req.body.amount +
+      '<br> BILLING INFO:' +
+      '<br><b>Address Line 1: </b> '+ req.body.address1 +
+      '<br><b>Address Line 2: </b> '+ req.body.address2 +
+      '<br><b>City: </b> '+ req.body.city +
+      '<br><b>State: </b> '+ req.body.state +
+      '<br><b>Zip: </b> '+ req.body.zip +
+      '<br> SHIPPING INFO:' +
       '<br><b>First Name: </b> '+req.body.first_name +
       '<br><b>Last Name: </b> '+req.body.last_name +
       '<br><b>Address Line 1: </b> '+ ship_address1 +
