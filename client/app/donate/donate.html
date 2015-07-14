@@ -1,4 +1,6 @@
-<form name="donationsForm" action="https://www.paypal.com/cgi-bin/webscr" target="_blank" method="POST" novalidate>
+<form name="donationsForm" action="https://www.paypal.com/cgi-bin/webscr" target="_new" method="POST" novalidate>
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="Q5WXHXVJPBT4E">
   <div class="info-container">
     <p>With every donation we will send a custom designed <a href="http://puravidabracelets.com/" target="_blank" alt="Pura Vida">Pura Vida</a> bracelet!
     <div class="form-group">
@@ -7,25 +9,25 @@
         <input id="send-bracelet"  ng-model="donationForm.sendBracelet" name="send-bracelet" type="checkbox"> Please send me a <a href="http://puravidabracelets.com/" target="_blank" alt="Pura Vida">Pura Vida</a> bracelet.
       </label>
     </div></p>
-    <input type="hidden" name="cmd" value="_donations">
+<!--     <input type="hidden" name="cmd" value="_donations"> -->
     <input type="hidden" name="business" value="heartandhammerorg@gmail.com">
     <input type="hidden" name="item_name" value="Heart and Hammer Donation">
     <input type="hidden" name="undefined_quantity" value="1">
     <input type="hidden" name="currency_code" value="USD">
     <input type="hidden" name="lc" value="US">
 
-      <div class="form-group">
+<!--       <div class="form-group">
         <label class="donation-label">How much would you like to donate?</label>
         <div class="donation-container">
             $
             <input type="number" class="form-control inline" name="amount" ng-model="donationForm.amount" required>
         </div>
-      </div>
+      </div> -->
 
 <!--       <span class="infographic-caption" ng-show="donationForm.amount > 0">Wondering where your  ${{donationForm.amount}} is going to?</span> -->
-      <div class="error" ng-show="invalidNumberInput(donationsForm)"> We don't accept any donations under $1.</div> 
+<!--       <div class="error" ng-show="invalidNumberInput(donationsForm)"> We don't accept any donations under $1.</div> 
       <div class="rehab" ng-show="invalidNumberInput(donationsForm)">
-      <a ui-sref="missions({scrollTo: 'mission_2015_a'})">Do you want to learn more about our June 2015 Humanitarian Mission?</a></div>
+      <a ui-sref="missions({scrollTo: 'mission_2015_a'})">Do you want to learn more about our June 2015 Humanitarian Mission?</a></div> -->
       <div id="infographic">
       <!-- <div id="infographic" ng-show="donationForm.amount > 0"> -->
 <!--         <span class="important-amount">{{donationForm.amount | currency}}</span>  -->
@@ -98,11 +100,11 @@
         </div>
       </div>
   </div>
-    <button type="submit" ng-show="donationForm.amount" ng-click='submitForm()' class="btn btn-default">Checkout in Paypal  <i class="fa fa-lock"></i></button>
+    <button type="submit" ng-click='submitForm()' class="btn btn-default">Checkout in Paypal  <i class="fa fa-lock"></i></button>
     <br/>
-    <div class="error" ng-show="invalidNumberInput(donationsForm) || !donationForm.amount"> Please enter a valid donation.</div> 
+<!--     <div class="error" ng-show="invalidNumberInput(donationsForm) || !donationForm.amount"> Please enter a valid donation.</div> 
 
-    <br/>
+    <br/> -->
     <p><i class="fa fa-info-circle"></i>  <span class="error">Worried about not having a PayPal Account? </span> 
     <p>That's okay, you can just donate using your credit card in PayPal without signing up.</p></p>
     <br/>

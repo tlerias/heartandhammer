@@ -39,14 +39,14 @@ angular.module('heartHammerApp')
     //     });
     // }
 
-    $scope.invalidNumberInput = function (form) {
-      if (form.$dirty && ($scope.donationForm.amount < 1 || typeof $scope.donationForm.amount === 'undefined' )) {
+    // $scope.invalidNumberInput = function (form) {
+    //   if (form.$dirty && ($scope.donationForm.amount < 1 || typeof $scope.donationForm.amount === 'undefined' )) {
 
-        return true
-      } else {
-        return false;
-      }
-    };
+    //     return true
+    //   } else {
+    //     return false;
+    //   }
+    // };
 
     // $scope.$watch('amount', function () {
     //   if ($scope.donationForm.amount.$dirty && donationForm.amount < 1) {
@@ -64,10 +64,10 @@ angular.module('heartHammerApp')
     $scope.submitForm = function () {
       $http.post('/api/donations/send', $scope.donationForm)
       .success(function(data, headers) {
-        $state.go('donate-success');
+        $state.go('donate-submitted');
       })
       .error(function(data, headers) {
-        $state.go('donate-error');
+        $state.go('donate-submitted');
 
       });
     };
