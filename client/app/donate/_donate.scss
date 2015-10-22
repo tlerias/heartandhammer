@@ -18,13 +18,6 @@ form {
       display: block;
       text-align: center;
 
-      .important-amount {
-        display: inline-block;
-        font-size: 1.2em;
-        font-weight: 600;
-        color: $hh_red;
-      }
-
       .total {
         font-size: 1.3em;
         font-weight: 600;
@@ -73,6 +66,12 @@ form {
     }
   }
 
+.important-amount {
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: $hh_red;
+}
 
   .donation-container, .form-group {
     padding-left: 10px;
@@ -113,6 +112,11 @@ form {
 
    }
  }
+
+.donate-now {
+  margin: 5px 0 10px 0;
+ }
+
 .inline {
   display: inline-block;
   width: 100px;
@@ -121,7 +125,7 @@ form {
 .error, .number-important {
   color: $hh_red;
   font-weight: 600;
-  font-size: 18px;
+  // font-size: 18px;
 }
 
 .fa-info-circle  {

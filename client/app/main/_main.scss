@@ -18,7 +18,7 @@
   box-shadow: 0px 2px 2px 2px #D3D3D3;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
-#content-upcoming, #content-2013, #content-2012 {
+#content-2015, #content-2013, #content-2012 {
   position:relative;
 
   .content-text {
@@ -80,8 +80,8 @@
     background-position: 0;
     background-size: cover;
 }
-#main-img-upcoming {
-    background-image: url(http://res.cloudinary.com/hgahynedu/image/upload/v1428450625/2012_jjewwn.jpg);
+#main-img-2015 {
+    background-image: url(http://res.cloudinary.com/hgahynedu/image/upload/v1445539213/jun2015_missionPrev_askb4c.jpg);
 
 }
 #main-img-2012 {
@@ -162,7 +162,7 @@
     display: block;
   }
 }
-#content-upcoming {
+#content-2015 {
   order: 3;
 }
 #content-2013 {
@@ -170,6 +170,11 @@
 }
 #content-2012 {
   order: 5;
+}
+
+#promo-video {
+  margin: 10px auto;
+  text-align: center;
 }
 
 .donate-btn {
@@ -205,7 +210,7 @@ a, a:visited {
     height: 450px;
     }
 
-    #content-upcoming, #content-2013, #content-2012 {
+    #content-2015, #content-2013, #content-2012 {
       position:relative;
       overflow: hidden;
       &:hover {

@@ -1,149 +1,165 @@
-
 #mission_2012_img,
 #mission_2013_img,
 #mission_2015_img {
-  display: inline-block;
-  height: 125px;
-  width: 200px;
+    display: inline-block;
+    height: 125px;
+    width: 200px;
 }
+
 #mission_2012_img {
-  background: url('http://res.cloudinary.com/hgahynedu/image/upload/v1429143436/2012_PMAA_01_b3ajmc.jpg');
-  background-size: 200px;
-  background-repeat: no-repeat;
+    background: url("http://res.cloudinary.com/hgahynedu/image/upload/v1429143436/2012_PMAA_01_b3ajmc.jpg");
+    background-size: 200px;
+    background-repeat: no-repeat;
 }
+
 #mission_2013_img {
-  background: url('http://res.cloudinary.com/hgahynedu/image/upload/v1429143439/2013_PMAA_01_snmf9z.jpg');
-  background-size: 200px;
-  background-repeat: no-repeat;
+    background: url("http://res.cloudinary.com/hgahynedu/image/upload/v1429143439/2013_PMAA_01_snmf9z.jpg");
+    background-size: 200px;
+    background-repeat: no-repeat;
 }
+
 #mission_2015_img {
-  background: url('http://res.cloudinary.com/hgahynedu/image/upload/v1429143438/upcoming_m6aagw.jpg');
-  background-size: 200px;
-  background-repeat: no-repeat;
+    background: url("http://res.cloudinary.com/hgahynedu/image/upload/v1445539213/jun2015_missionPhoto_i9szsn.jpg");
+    background-size: 200px;
+    background-repeat: no-repeat;
 }
 
 .mission-container {
-  text-align: center;
-  .mission {
-    box-sizing: border-box;
-    position: relative;
-    background-color: white;
-    padding: 0 0 20px 0;
-    margin: 15px 15px 25px 15px;
-    /*-webkit-box-shadow: 0px 2px 2px 2px #D3D3D3; 
-    -moz-box-shadow: 0px 2px 2px 2px #D3D3D3;  
-    box-shadow: 0px 2px 2px 2px #D3D3D3;  
-    border-bottom: thick solid $hh_orange;*/
+    text-align: center;
 
-    .mission-loc {
-      font-weight: 900;
-      font-size: 16px;
-      margin: 10px auto 25px auto;
-      background-color: $hh_gray;
-      padding: 5px;
-      color: #CC6633;
-      text-align: center;
-      min-width: 100px;
+    .mission {
+        box-sizing: border-box;
+        position: relative;
+        background-color: white;
+        padding: 0 0 20px 0;
+        margin: 15px 15px 25px 15px;
+
+        /*-webkit-box-shadow: 0px 2px 2px 2px #D3D3D3; 
+        -moz-box-shadow: 0px 2px 2px 2px #D3D3D3;  
+        box-shadow: 0px 2px 2px 2px #D3D3D3;  
+        border-bottom: thick solid $hh_orange;*/
+
+        .mission-loc {
+            font-weight: 900;
+            font-size: 16px;
+            margin: 10px auto 25px auto;
+            background-color: $hh_gray;
+            padding: 5px;
+            color: #CC6633;
+            text-align: center;
+            min-width: 100px;
+        }
+
+        .mission-description {
+            margin: 25px 0;
+        }
+
+        .fa-heart {
+            color: $hh_red;
+            font-size: 15px;
+            float: left;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        .corner-ribbon-container {
+            position: absolute;
+            display: hidden;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='your_transparent.png', sizingMethod='scale');
+            background: none !important;
+
+            .opaque {
+                opacity: 0;
+            }
+        }
+    }
+
+    h4 {
+        color: $hh_red;
+        font-weight: 900;
     }
 
     .mission-description {
-      margin: 25px 0;
-    }
-    .fa-heart {
-      color: $hh_red;
-      font-size: 15px;
-      float:left;
-       -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-
+        width: 100%;
+        color: $hh_gray;
+        margin-bottom: 15px;
+        text-align: center;
     }
 
-    .corner-ribbon-container {
-      position: absolute;
-      display: hidden;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      pointer-events: none;
-      filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='your_transparent.png', sizingMethod='scale');
-      background: none !important;
-
-      .opaque {
-        opacity: 0;
-      }
+    a.anchor {
+        display: block;
+        position: relative;
+        top: -110px;
+        visibility: hidden;
     }
-
-
-
-  }
-
-
-
-  h4 {
-    color: $hh_red;
-    font-weight: 900;
-  }
-
-  .mission-description {
-    width: 100%;
-    color: $hh_gray;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-
-  a.anchor {
-    display: block;
-    position: relative;
-    top: -110px;
-    visibility: hidden;
-  }
 }
 
 @media all and (min-width: 500px) {
-  
-  #mission_2012_img,
-  #mission_2013_img,
-  #mission_2015_img {
-    display: inline-block;
-    background-size: 100%;
-    height: 300px;
-    width: 40%;
-    margin: 0 50px;
-    vertical-align: middle;
-  }
-
-  .mission-container {
-    text-align: center;
-    .mission {
-
-      .mission-loc {
-        font-size: 24px;
-        width: 500px;
-      }
-
-      .fa-heart {
-      font-size: 40px;
-
-    }
-      .corner-ribbon-container {
-        .opaque {
-          opacity: 1;
-        }
-      }
-
-      .mission-description {
-        vertical-align: middle;
-        margin: 0 50px;
-        height: 100%;
+    #mission_2012_img,
+    #mission_2013_img,
+    #mission_2015_img {
         display: inline-block;
-        width: 30%;
-        text-align: left;
-      }
+        background-size: 100%;
+        height: 300px;
+        width: 40%;
+        margin: 0 50px;
+        vertical-align: middle;
     }
-  }
+
+    .mission-container {
+        text-align: center;
+
+        .testimonial_container {
+          text-align: left;
+          margin: 0 50px;
+          width: 100%;
+
+          .testimonial_image {
+            display: inline-block;
+            width: 20%
+          }
+
+          .testimonial {
+            font-size: .9em;
+            padding: 0 20px;
+            display: inline-block;
+            width: 70%;
+          }
+        }
+
+        .mission {
+            .mission-loc {
+                font-size: 24px;
+                width: 500px;
+            }
+
+            .fa-heart {
+                font-size: 40px;
+            }
+
+            .corner-ribbon-container {
+                .opaque {
+                    opacity: 1;
+                }
+            }
+
+            .mission-description {
+                vertical-align: middle;
+                margin: 0 50px;
+                height: 100%;
+                display: inline-block;
+                width: 30%;
+                text-align: left;
+            }
+        }
+    }
 }

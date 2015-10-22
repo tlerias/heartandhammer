@@ -134,6 +134,10 @@
     font-size: 16px;
     width: 85%;
 
+      #promo-video {
+        display: none;
+      }
+
     .contact-info {
       text-align: center;
 
@@ -155,7 +159,6 @@
     p {
     }
   }
-
 
 
   .name, .name2 {
@@ -199,6 +202,12 @@
   
   .about-container {
     padding: 50px;
+
+    .about-content {
+      #promo-video {
+        display: block;
+      }
+    }
 
     .about-member {
       width: 100%;
