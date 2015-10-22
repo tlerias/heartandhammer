@@ -50,10 +50,20 @@
             min-width: 100px;
         }
 
+        .mission-testimonials {
+          color: $hh_red;
+          font-weight: 900;
+          font-size: 16px;
+          margin: 10px auto 5px auto;
+          padding: 5px;
+          text-align: center;
+          min-width: 100px;
+        }
+
         .mission-description {
             margin: 25px 0;
         }
-
+/*
         .fa-heart {
             color: $hh_red;
             font-size: 15px;
@@ -64,6 +74,7 @@
             -o-transform: rotate(-45deg);
             transform: rotate(-45deg);
         }
+        */
 
         .corner-ribbon-container {
             position: absolute;
@@ -80,6 +91,12 @@
             .opaque {
                 opacity: 0;
             }
+        }
+
+        .quoted {
+          color: $hh_red;
+          font-weight: 900;
+          font-size: 1.2em;
         }
     }
 
@@ -118,33 +135,15 @@
     .mission-container {
         text-align: center;
 
-        .testimonial_container {
-          text-align: left;
-          margin: 0 50px;
-          width: 100%;
-
-          .testimonial_image {
-            display: inline-block;
-            width: 20%
-          }
-
-          .testimonial {
-            font-size: .9em;
-            padding: 0 20px;
-            display: inline-block;
-            width: 70%;
-          }
-        }
-
         .mission {
             .mission-loc {
                 font-size: 24px;
                 width: 500px;
             }
 
-            .fa-heart {
+/*            .fa-heart {
                 font-size: 40px;
-            }
+            }*/
 
             .corner-ribbon-container {
                 .opaque {
@@ -159,6 +158,36 @@
                 display: inline-block;
                 width: 30%;
                 text-align: left;
+            }
+
+            .testimonial_container {
+              text-align: center;
+              margin: 25px 50px 20px 50px;
+
+              .mission-testimonials {
+                font-size: 16px;
+                width: 70%;
+                text-align: left;
+                padding: 15px;
+                
+              }
+
+              .testimonial_image {
+                display: inline-block;
+                width: 30%;
+                vertical-align: middle;
+                padding: 0 25px;
+              }
+
+              .testimonial {
+                font-size: .9em;
+                margin-left: 20px;
+                display: inline-block;
+                width: 40%;
+                text-align: left;
+                vertical-align: middle;
+                padding: 0 25px;
+              }
             }
         }
     }
