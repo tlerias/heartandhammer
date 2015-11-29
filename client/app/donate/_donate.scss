@@ -144,7 +144,14 @@ img {
     width: auto\9; /* ie8 */
 }
 
+#promo-video {
+   display: none;
+  }
+
 @media all and (min-width: 500px) {
+  #promo-video {
+    display: block;
+  }
   form {
     display: -webkit-box;
     display: -moz-box;
