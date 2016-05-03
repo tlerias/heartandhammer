@@ -1,7 +1,9 @@
 #mission_2012_img,
 #mission_2013_img,
 #mission_2015_img,
-#mission_2015_holidays_img {
+#mission_2015_holidays_img,
+#soup-kitchen-2015_img,
+#cash_2016_img {
     display: inline-block;
     height: 125px;
     width: 200px;
@@ -27,6 +29,18 @@
 
 #mission_2015_holidays_img {
   background: url("http://res.cloudinary.com/hgahynedu/image/upload/v1448832919/2015-carecase_aggsyn.jpg");
+  background-size: 200px;
+  background-repeat: no-repeat;
+}
+
+#soup-kitchen-2015_img {
+  background: url("http://res.cloudinary.com/hgahynedu/image/upload/v1462235265/12.23.15_Soup_Kitchen2_gxk8ym.jpg");
+  background-size: 200px;
+  background-repeat: no-repeat;
+}
+
+#cash_2016_img {
+  background: url("http://res.cloudinary.com/hgahynedu/image/upload/v1462233667/april-2016-CASH-all_oku5kt.jpg");
   background-size: 200px;
   background-repeat: no-repeat;
 }
@@ -131,7 +145,10 @@
     #mission_2012_img,
     #mission_2013_img,
     #mission_2015_img,
-    #mission_2015_holidays_img {
+    #mission_2015_holidays_img,
+    #soup-kitchen-2015_img,
+    #cash_2016_img
+     {
         display: inline-block;
         background-size: 100%;
         height: 300px;

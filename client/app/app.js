@@ -24,7 +24,7 @@ angular.module('heartHammerApp', [
         controller: 'AboutCtrl'
       })
       .state('missions', {
-        url: '/missions',
+        url: '/events',
         templateUrl: 'app/missions/missions.html',
         controller: 'MissionsCtrl',
         params: {
