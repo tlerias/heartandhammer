@@ -1,113 +1,34 @@
 <div class="mission-container">
 
-  <!-- <div id="mission-timeline">
-    <p>
-      <b>2016:</b>
-      <ul>
-        <li>April: 
-        <a href="#seniorcenter_2016_carecases_a">Chester Area Senior Housing Party</a>
-        </li>
-      </ul>
+  <timeline>
 
-      <b>2015:</b>
-      <ul>
-        <li>December 24th:
-          <a href="#soupkitchen_2015_a">Fraternite Notre Dame Mary of Nazareth House Soup Kitchen</a>
-        </li>
-        <li>November/December:
-          <a href="#carecases_2015_a">Care Cases for the Homeless</a>
-        </li>
-        <li>June:
-          <a href="#mission_2015_a">Humanitarian Mission</a> in Siquihor and Bohol, Philippines
-        </li>
-      </ul>
+    <timeline-event ng-repeat="event in events" class="alternate">
+    <a class="anchor" id="{{event.anchorId}}"></a>
+      <timeline-badge class="{{event.badgeClass}}">
+        <i class="glyphicon {{event.badgeIconClass}}"></i>
+      </timeline-badge>
+      <timeline-panel class="{{event.badgeClass}}">
+        <timeline-heading>
+          <div class="mission-loc">{{event.title}}</div>
+        </timeline-heading>
+          <div id="{{event.id}}" class="mission">
+            <div id="{{event.imgId}}" class="mission-image"></div>
+            <div class="mission-description">
+              <h2>{{event.date}}</h2>
+              <h4>{{event.location}}</h4>
+              <p ng-bind-html="event.content"></p>
 
-      <b>2013:</b>
-      <ul>
-        <a href="#carecases_2015_a">Care Cases for the Hom</a>
-      </ul>
-
-      <b>2012:</b>
-      <ul>
-        <li>April: Chester Area Senior Housing Party</li>
-      </ul>
-    </p>
-  </div> -->
-  <a class="anchor" id="seniorcenter_2016_carecases_a"></a>
-  <div id="senior-center-2016" class="mission">
-    <div class="mission-loc">Chester, New Jersey, United States 2016</div>
-    <div id="cash_2016_img" class="mission-image"></div>
-    <div class="mission-description">
-      The Chester Area Senior Housing was undergoing construction due to flooding. Not only were some members of the senior center displaced, but they lost their recreational center. In April 2016, Heart and Hammer brought dinner, music and line dancing to those living in the center to help lift morale. It was a blessing to hear how grateful the members were of us to throw their best party yet.
-    </div>
-  </div>
-
-  <a class="anchor" id="soupkitchen_2015_a"></a>
-  <div id="soup-kitchen-2015" class="mission">
-    <div class="mission-loc">Harlem, New York, United States 2015</div>
-    <div class="mission-description">
-      On December 23rd 2015, Heart and Hammer brought holiday cheer to the Fraternite Notre Dame Mary of Nazareth House Soup Kitchen in Harlem New York.  We were able to distribute 125 of our Care Cases, while serving over 250 people. Even the less fortunate deserve a warm meal in their belly during the cold holiday season. Heart and Hammer is proud to have met and serve the attendees of this soup kitchen.
-
-
-    </div>
-    <div id="soup-kitchen-2015_img" class="mission-image"></div>
-  </div>
-
-  <a class="anchor" id="carecases_2015_a"></a>
-  <div id="care-case-2015" class="mission">
-    <div class="mission-loc">New York City, Hoboken and Philadelphia, United States 2015</div>
-    <div id="mission_2015_holidays_img" class="mission-image"></div>
-    <div class="mission-description">
-      Holiday Season 2015, the Heart and Hammer team packed Care Cases for the homeless. Each case contained toiletries, healthy snacks,
-      and additional goodies. We distributed hundreds of care cases in New York, New Jersey and Pennsylvania. The Care Cases project continued our mission of improving the lives of the poor through volunteerism and charitable giving with a focus on our local neighborhoods.
-    </div>
-  </div>
-
-  <a class="anchor" id="mission_2015_a"></a>
-  <div id="mission_2015" class="mission">
-<!--     <div class="corner-ribbon-container">
-      <div class="corner-ribbon opaque">Upcoming</div>
-    </div> -->
-
-    <!-- <i class="fa fa-heart"></i> -->
-    <div class="mission-loc">Siquihor and Bohol, Philippines 2015</div>
-    <div class="mission-description">
-<!--     <p>The town of Maria, in the island province of Siquijor, is a 5th class municipality with a population of 13,544. Most of the people depend on farming and fishing for their livelihood. Some families have members working as Overseas Filipino Workers and others have members engaged in small businesses, but life is still a struggle for most. While the municipal government strives to meet the basic needs of the people within its limited income, 800 families are still considered as indigent and live in poverty. They struggle from day to day to earn a few pesos to buy some kilos of rice, without thinking of viands to go with it. Heart and Hammer has teamed up with the government of Maria to distribute goods to these 800 families during this Humanitarian Mission.</p>
-
-    <p>In Bohol, we are going to reach two <a href="http://www.gk1world.com" target="_new">Gawad Kalinga</a> (Helping Hands) Villages. This includes 80 families in Dawies and 20 families in Baclayon. Gawad Kalinga are villages built on land donations. The houses in the villages cost about $3,000.00 each to build. The families living in these homes were all previously living in squatter areas and are considered the poorest members of the city. Heart and Hammer will also be visiting these two villages to distribute goods to these impoverished families.</p>
-
-    <p>A humanitarian mission by Heart and Hammer will go a long way to helping these indigent families. Even basic necessities, such as, clothes, shoes, blankets, towels, and personal hygiene kits are considered luxuries by these poor families. Kilos of rice, canned goods, and other food items will bring great joy to them. Heart and Hammer looks forward to meeting these people and bringing donated goods to help their unfortunate situation.</p> -->
-
-      <p>In June of 2015, the Heart and Hammer team distributed almost 1000 care packages serving 4 different communities in 2 different Islands of the Philippines. The first stop was in Maria, Siquihor, where 800 families considered as indigent and live in poverty in 21 Barangays (municipalities) received care packages. Next, the team went to Bohol and served 3 different Gawad Kalinga (Helping Hands) Villages including Dawies 80 families served, Tagbilaran 39 families served, and Baclayon 20 families served. Each family received 10 lbs. of rice, 2 cans of sardines, 2 ramen noodles, toiletries, personal hygiene kits, clothing, candy, pasta, toys, school supplies, teas, coffees, etc. for which was sorted, assembled, and distributed. Colgate also donated and shipped 1000 toothbrushes & toothpastes directly to the Philippines and was included in each of the care packages distributed.</p>
-
-    </div>
-    <div id="mission_2015_img" class="mission-image"></div>
-
-    <div class="testimonial_container">
-      <div class="mission-testimonials">June 2015 Testimonial &nbsp;&nbsp;&nbsp;<i class="fa fa-heart"></i></div>
-      <p class="testimonial">"I appreciate everyone that supported our Heart and Hammer mission trip to the Philippines. Every donation put forth towards the mission trip greatly affects the lives of hundreds of Filipinos. It was an amazing experience witnessing first-hand all of the lives that were changed for the better. I got to personally hand out care packages that couldn’t be possible without all of the support to families and children, young and old. The care packages do not just affect an individual, but an entire family. And the greatest gift of all is seeing their appreciation through their beautiful smiles. The slightest show of support goes a very long way towards changing lives for the better. To the world, you may be on person…but to one person, you may be the world." - <span class="quoted">T.J. DiCesare</span></p>
-
-      <img src="http://res.cloudinary.com/hgahynedu/image/upload/c_scale,h_200/v1445537664/jun2015_Tj_testimonial_abvgzz.jpg" alt="TJ DiCesare" class="testimonial_image"/>
-    </div>
-  </div>
-  <a class="anchor" id="mission_2013_a"></a>
-  <div id="mission_2013" class="mission">
-    <!-- <i class="fa fa-heart"></i> -->
-    <div class="mission-loc">Vigan City, Ilocos Sur, Philippines 2013</div>
-    <div id="mission_2013_img" class="mission-image"></div>
-    <div class="mission-description">
-
-      The team visited Vigan City's slum areas for three days and distributed 1,500 care packages total. 3,000 other families received other donated items. These care packages consisted of 2 kilos of rice, sardines, teas, face towels, candy/chocolates, toothbrushes, toothpaste, shampoo, soap, and a toy for each family. While providing humanitarian efforts at several <a href="http://en.wikipedia.org/wiki/Barangay" target="_new">barangays</a>, Heart & Hammer also distributed care packages at Philippine Medical Association in America's (PMAA) 501(c)(3) medical mission.
-    </div>
-  </div>
-  <a class="anchor" id="mission_2012_a"></a>
-  <div id="mission_2012" class="mission">
-    <!-- <i class="fa fa-heart"></i> -->
-    <div class="mission-loc">Cebu City, Philippines, 2012</div>
-    <div class="mission-description">
-      
-      Cebu City hosted Philippine Medical Association in America's (PMAA) 501(c)(3) medical mission where those in need were given surgical, medical, and dental services. As PMAA hosted thier medical mission,  Heart & Hammer provided humanitarian support as we distributed more than 2,500 care packages. In these care packages were medicine, vitamins, bowls, rice, sardines, noodles, cookies, candy, toys, bags, clothing and shoes. 
-    </div> 
-    <div id="mission_2012_img" class="mission-image"></div>
-  </div>
+              <div ng-if="event.testimonials" class="testimonial_container">
+                <div class="mission-testimonials">{{event.title}} Testimonial &nbsp;&nbsp;&nbsp;<i class="fa fa-heart"></i></div>
+                <div ng-repeat="testimonial in event.testimonials">
+                  <p class="testimonial">"{{testimonial.quote}}" - <span class="quoted">{{testimonial.author}}</span></p>
+                  <img ng-src="{{testimonial.img}}" class="testimonial_image" alt="{{testimonial.imgAlt}}"/>
+                </div>
+              </div>
+            </div>
+          </div>
+      </timeline-panel>
+    </timeline-event>
+  
+  </timeline>
 </div>

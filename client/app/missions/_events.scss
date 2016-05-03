@@ -1,0 +1,139 @@
+#mission_2012_img,
+#mission_2013_img,
+#mission_2015_img,
+#mission_2015_holidays_img,
+#soup-kitchen-2015_img,
+#cash_2016_img {
+    display: inline-block;
+    height: 125px;
+    width: 200px;
+}
+
+#mission_2012_img {
+    background: url("http://res.cloudinary.com/hgahynedu/image/upload/v1429143436/2012_PMAA_01_b3ajmc.jpg");
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
+
+#mission_2013_img {
+    background: url("http://res.cloudinary.com/hgahynedu/image/upload/v1429143439/2013_PMAA_01_snmf9z.jpg");
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
+
+#mission_2015_img {
+    background: url("http://res.cloudinary.com/hgahynedu/image/upload/v1445539213/jun2015_missionPhoto_i9szsn.jpg");
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
+
+#mission_2015_holidays_img {
+  background: url("http://res.cloudinary.com/hgahynedu/image/upload/v1448832919/2015-carecase_aggsyn.jpg");
+  background-size: 200px;
+  background-repeat: no-repeat;
+}
+
+#soup-kitchen-2015_img {
+  background: url("http://res.cloudinary.com/hgahynedu/image/upload/v1462235265/12.23.15_Soup_Kitchen2_gxk8ym.jpg");
+  background-size: 200px;
+  background-repeat: no-repeat;
+}
+
+#cash_2016_img {
+  background: url("http://res.cloudinary.com/hgahynedu/image/upload/v1462233667/april-2016-CASH-all_oku5kt.jpg");
+  background-size: 200px;
+  background-repeat: no-repeat;
+}
+
+h4 {
+  color: $hh_red;
+  font-weight: 900;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -110px;
+  visibility: hidden;
+}
+
+.mission-container {
+  text-align: center;
+}
+
+.mission-loc {
+  font-weight: 900;
+  font-size: 16px;
+  margin: 10px auto 25px auto;
+  background-color: $hh_gray;
+  padding: 5px;
+  color: #CC6633;
+  text-align: center;
+  min-width: 100px;
+}
+
+.mission-description {
+  vertical-align: middle;
+  height: 100%;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  color: $hh_gray;
+}
+
+.quoted {
+  color: $hh_red;
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+.mission-testimonials {
+  color: $hh_red;
+  font-weight: 900;
+  font-size: 16px;
+  margin: 10px auto 5px auto;
+  padding: 5px;
+  text-align: center;
+  min-width: 100px;
+}
+
+.testimonial_image {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 25px;
+}
+
+.testimonial {
+  font-size: .9em;
+  margin-left: 20px;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  padding: 0 25px;
+}
+
+.testimonial_container {
+  text-align: center;
+}
+
+.left {
+  float:left;
+}
+
+.right {
+  float: right;
+}
+
+@media all and (min-width: 500px) {
+  #mission_2012_img,
+  #mission_2013_img,
+  #mission_2015_img,
+  #mission_2015_holidays_img,
+  #soup-kitchen-2015_img,
+  #cash_2016_img {
+    display: inline-block;
+    height: 250px;
+    width: 400px;
+    background-size: 400px;
+}
+}
