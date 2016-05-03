@@ -42,7 +42,7 @@ angular.module('heartHammerApp')
 	  {
     	id: 'mission_2015',
     	anchorId: 'mission_2015_a',
-    	imgId: 'mission_2015_holidays_img',
+    	imgId: 'mission_2015_img',
 	    badgeClass: 'warning',
 	    badgeIconClass: 'glyphicon-globe',
 	    title: 'Humanitarian Mission 2015',
