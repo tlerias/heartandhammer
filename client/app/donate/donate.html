@@ -1,111 +1,35 @@
+<div class="donation-container">
+	
+	<div class="">
+		<img src="http://res.cloudinary.com/hgahynedu/image/upload/v1466890957/atl-chfc_mt7fhb.png" alt="Corn Hole for Charity, August 12 2016" />
+	</div>
+	<div class="donation-description">
+		<span class="d-desc-title"><h2>Come join us for drinks, food and corn hole fun!</h2></span>
 
-<div id="promo-video">
-  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/gMYy1d0iq8o" frameborder="0" allowfullscreen></iframe></center>
+		<p>
+			Heart and Hammer is hosting a Corn Hole Tournament to raise money for the <a href="http://www.fraternitenotredame.com/2011_2_0/new_york.php" target="_blank">Fraternite Notre Dame Mary of Nazareth House Soup Kitchen in Harlem, New York</a></p>
+
+		<p> <h4> Event Details: </h4>
+			<b>WeWork Time Square Outdoor Space</b> @ 6 PM <br>
+			August 12th 2016<br>
+			<span class="donation-amount">$5</span> Spectator Entry<br>
+			<span class="donation-amount">$10</span> Tournament Participant Entry
+		</p>
+
+		<p>
+			Winning Prize TBD
+		</p>
+
+		For more information checkout our <a href="https://events.bizzabo.com/202163" target="_blank">event site!</a>
+	</div>
+
+	<span class="additional-donation">All proceeds from entry tickets will go to the soup kitchen, but if you would like to make an additional donation, please donate through PayPal.</span>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+		<input type="hidden" name="cmd" value="_s-xclick" />
+		<input type="hidden" name="hosted_button_id" value="C8YQDUV94T6BU">
+		<button type="submit" class="btn btn-primary donate-now">Donate in Paypal  <i class="fa fa-lock"></i></button>
+		<div class="paypal-disclaimer"><span class="red-star">*</span>Paypal <i class="fa fa-paypal"></i> accepts all major credit cards</div>
+	</form>
+
+
 </div>
-<form name="donationsForm" action="https://www.paypal.com/cgi-bin/webscr" target="_new" method="POST" novalidate>
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="Q5WXHXVJPBT4E">
-  <div class="info-container">
-    <p>With every donation we will send a custom designed <a href="http://puravidabracelets.com/" target="_blank" alt="Pura Vida">Pura Vida</a> bracelet!
-    <div class="form-group">
-      <div class="checkbox">
-      <label>
-        <input id="send-bracelet"  ng-model="donationForm.sendBracelet" name="send-bracelet" type="checkbox"> Please send me a <a href="http://puravidabracelets.com/" target="_blank" alt="Pura Vida">Pura Vida</a> bracelet.
-      </label>
-    </div></p>
-<!--     <input type="hidden" name="cmd" value="_donations"> -->
-    <input type="hidden" name="business" value="heartandhammerorg@gmail.com">
-    <input type="hidden" name="item_name" value="Heart and Hammer Donation">
-    <input type="hidden" name="undefined_quantity" value="1">
-    <input type="hidden" name="currency_code" value="USD">
-    <input type="hidden" name="lc" value="US">
-
-<!--       <div class="form-group">
-        <label class="donation-label">How much would you like to donate?</label>
-        <div class="donation-container">
-            $
-            <input type="number" class="form-control inline" name="amount" ng-model="donationForm.amount" required>
-        </div>
-      </div> -->
-
-<!--       <span class="infographic-caption" ng-show="donationForm.amount > 0">Wondering where your  ${{donationForm.amount}} is going to?</span> -->
-<!--       <div class="error" ng-show="invalidNumberInput(donationsForm)"> We don't accept any donations under $1.</div> 
-      <div class="rehab" ng-show="invalidNumberInput(donationsForm)">
-      <a ui-sref="missions({scrollTo: 'mission_2015_a'})">Do you want to learn more about our June 2015 Humanitarian Mission?</a></div> -->
-      <div id="infographic">
-      <!-- <div id="infographic" ng-show="donationForm.amount > 0"> -->
-<!--         <span class="important-amount">{{donationForm.amount | currency}}</span>  -->
-<!--         <span class="operation subtract"><i class="fa fa-minus"></i></span> $2.50 (pura vida cost)
-        <div class="operation equals"></div>
-          <span class="important-amount total">{{totalCost | currency}}</span> goes directly to buying supplies f -->
-<!--           Your donation of ${{donationForm.amount}} will fund:
-          <span class="important-amount">{{rice}}</span>
-          <span class="important-amount">or</span>
-          <span class="important-amount">{{toiletries}}</span>
-          For our <a ui-sref="missions({scrollTo: 'mission_2015_a'})">2015 humanitarian mission</a> -->
-          All donations are tax deductible and go directly to the people in need.
-          <h2><span class="important-amount">$5 </span> buys <span class="important-amount">one</span> full <b>Care Case</b></h2>
-      </div>
-      <div id="food-pack">
-        <div class="food-pack-header"><h4>What's in the "Care Case"?</h4></div>
-        <div class="food-pack-contents">
-          <ul>
-            <li>Toiletries: Baby wipes, lip balm, lotion, sunscreen</li>
-            <li>Healthy Snack: Apple sauce, pudding cup, trail mix or beef jerky</li>
-            <li>Additional Goody: Travel Coffee Mug, Gift Card, Band Aid, Socks, Hand/Feet Warmers</li>
-          </ul>
-        </div>
-        <span class="important-amount">*</span> <b>Care Cases will be given to homeless members of Hoboken, NJ; New York, NY; and Philadelphia, PA as gifts for the holidays.</b>
-      </div>
-    </div>
-  </div>
-  <div class="input-area">
-    <h4>Please enter your information</h4>
-    <div class="form-group">
-      <input type="input" class="form-control" ng-model="donationForm.first_name" placeholder="First Name*" name="first_name" required>
-      <input type="input" class="form-control" ng-model="donationForm.last_name" placeholder="Last Name*" name="last_name" required>
-    </div>
-    <div class="form-group">
-      <input type="input" class="form-control" ng-model="donationForm.email" placeholder="Email*" name="email" required>
-      <input type="input" class="form-control" ng-model="donationForm.night_phone_a" placeholder="Phone*" name="night_phone_a" required>
-    </div>
-  <h5>Billing Address</h5>
-  <div class="form-group">
-    <input type="input" class="form-control" ng-model="donationForm.address1" placeholder="Address*" name="address1" required>
-    <input type="input" class="form-control" ng-model="donationForm.address2" placeholder="Apt, Unit, etc" name="address2">
-  </div>
-  <div class="form-group">
-    <input type="input" class="form-control location" ng-model="donationForm.city" placeholder="City*" name="city" required>
-    <input type="input" class="form-control location" ng-model="donationForm.state" placeholder="State*" name="state" required>
-    <input type="input" class="form-control location" ng-model="donationForm.zip" placeholder="Zip*" name="zip" required>
-    </div>
-    <div id="shipping-container" ng-class="{'hidden': !donationForm.sendBracelet}">
-      <h5>Shipping Address</h5>
-      <div class="form-group checkbox">
-        <label>
-          Same as billing<input id="shipping-check" type="checkbox" ng-model="donationForm.shippingIsBilling">
-        </label>
-      </div>
-      <div id="shipping_section" class="">
-        <div class="form-group">
-          <input type="input" class="form-control" ng-model="donationForm.ship_address1" placeholder="Address*" name="ship_address1" ng-required="donationForm.sendBracelet && !donationForm.shippingIsBilling">
-          <input type="input" ng-model="donationForm.ship_address2" class="form-control" placeholder="Apt, Unit, etc" name="ship_address2">
-        </div>
-        <div class="form-group">
-          <input type="input" ng-model="donationForm.ship_city" class="form-control location" placeholder="City*" name="ship_city" ng-required="donationForm.sendBracelet &&  !donationForm.shippingIsBilling">
-          <input type="input" ng-model="donationForm.ship_state" class="form-control location" placeholder="State*" name="ship_state" ng-required="donationForm.sendBracelet &&  !donationForm.shippingIsBilling">
-          <input type="input" class="form-control location" ng-model="donationForm.ship_zip" placeholder="Zip*" name="ship_zip" ng-required="donationForm.sendBracelet && !donationForm.shippingIsBilling">
-        </div>
-      </div>
-  </div>
-    <button type="submit" ng-click='submitForm()' class="btn btn-primary donate-now">Checkout in Paypal  <i class="fa fa-lock"></i></button>
-    <br/>
-<!--     <div class="error" ng-show="invalidNumberInput(donationsForm) || !donationForm.amount"> Please enter a valid donation.</div> 
-
-    <br/> -->
-    <p><i class="fa fa-info-circle"></i>  <span class="error">Worried about not having a PayPal Account? </span> 
-    <p>That's okay, you can just donate using your credit card in PayPal without signing up.</p></p>
-    <br/>
-    <p><a href="mailto:heartandhammerorg@gmail.com?subject=Donation&body=I would like to make a donation but I'm having issues on the website.">Having trouble donating?</a></p>
-  </div>
-</form>
