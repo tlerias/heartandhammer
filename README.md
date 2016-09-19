@@ -11,10 +11,9 @@ gulp serve
 ```
 
 To run application locally:
-```
-gulp serve
-http://localhost:9000/
-```
+`gulp serve`
+
+The website will automatically open however to access the page you can go to: http://localhost:9000/
 
 To build application and to run it:
 ```
