@@ -11,7 +11,10 @@ gulp serve
 ```
 
 To run application locally:
-`gulp serve`
+```
+gulp serve
+http://localhost:9000/
+```
 
 To build application and to run it:
 ```
