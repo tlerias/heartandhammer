@@ -4,23 +4,29 @@ Website application code for heartandhammer.org
 
 ## Installation
 
-```npm install
+```
+npm install
 bower install
-gulp serve```
+gulp serve
+```
 
 To run application locally:
 `gulp serve`
 
 To build application and to run it:
-```gulp build
-gulp serve:dist```
+```
+gulp build
+gulp serve:dist
+```
 
 ## Deploying
-```gulp build
+```
+gulp build
 gulp serve:dist
 cd dist
 git commit -m "Deploying"
-git push heroku master```
+git push heroku master
+```
 
 ## Contributing
 
