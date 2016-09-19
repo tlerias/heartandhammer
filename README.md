@@ -7,24 +7,24 @@ Website application code for heartandhammer.org
 ```
 npm install
 bower install
-gulp serve
+grunt serve
 ```
 
 To run application locally:
-`gulp serve`
+`grunt serve`
 
 The website will automatically open however to access the page you can go to: http://localhost:9000/
 
 To build application and to run it:
 ```
-gulp build
-gulp serve:dist
+grunt build
+grunt serve:dist
 ```
 
 ## Deploying
 ```
-gulp build
-gulp serve:dist
+grunt build
+grunt serve:dist
 cd dist
 git commit -m "Deploying"
 git push heroku master
