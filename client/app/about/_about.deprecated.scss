@@ -1,0 +1,251 @@
+#about-us-img {
+  background: url('http://res.cloudinary.com/hgahynedu/image/upload/v1429143438/gabby_ts2msw.jpg');
+  height: 200px;
+  width: 275px;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.img-gabby {
+  background: url('http://res.cloudinary.com/hgahynedu/image/upload/c_scale,w_396/v1430785372/gabby_hncnga.jpg');
+  height: 200px;
+  width: 275px;
+  background-position: -25px;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  margin: 10px auto;
+  position: relative;
+  text-align: center;
+}
+
+.img-dani {
+  background: url('http://res.cloudinary.com/hgahynedu/image/upload/a_auto_right/v1431208197/dani_nwmk4v.jpg');
+  height: 200px;
+  width: 200px;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  margin: 10px auto;
+  position: relative;
+  text-align: center;
+}
+
+.img-maria {
+  background: url('http://res.cloudinary.com/hgahynedu/image/upload/v1431208197/coradini_yuegul.jpg');
+  height: 200px;
+  width: 275px;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  margin: 10px auto;
+  position: relative;
+  text-align: center;
+}
+
+.img-nas-iv {
+  background: url('http://res.cloudinary.com/hgahynedu/image/upload/c_scale,w_627/v1430785835/nas_iv_ybnxuv.jpg');
+  height: 200px;
+  width: 275px;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  margin: 0 auto 25px auto;
+  position: relative;
+  text-align: center;
+}
+
+.img-paulette {
+  background: url('http://res.cloudinary.com/hgahynedu/image/upload/c_scale,w_721/v1430785347/Paul_TJ_Phil_Mission_jzrxfx.jpg');
+  height: 200px;
+  width: 275px;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  margin: 0 auto 25px auto;
+  position: relative;
+  text-align: center;
+}
+.img-tara {
+  background: url('http://res.cloudinary.com/hgahynedu/image/upload/v1430785919/267958_476642932400349_1571309720_n_xxctxc.jpg');
+  height: 200px;
+  width: 275px;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  margin: 10px auto;
+  position: relative;
+  text-align: center;
+}
+
+.img-rach {
+  background: url('http://res.cloudinary.com/hgahynedu/image/upload/v1431397168/rachty_osyokg.jpg');
+  height: 200px;
+  width: 275px;
+  background-position: -150px 0;
+  background-repeat: no-repeat;
+  margin: 10px auto;
+  position: relative;
+  text-align: center;
+}
+
+.img-edgar {
+  background: url('http://res.cloudinary.com/hgahynedu/image/upload/v1431396827/10479056_674439082641452_4301751571205623660_n_jqvmim.jpg');
+  height: 200px;
+  width: 275px;
+  background-size: 300px;
+  background-position: -10px -50px;
+  background-repeat: no-repeat;
+  margin: 10px auto;
+  position: relative;
+  text-align: center;
+}
+.about-container {
+  padding: 20px;
+
+  .title {
+        margin: 10px 0 25px 0;
+        font-weight: 900;
+        color: $hh_orange;
+        font-size: 30px;
+        // background-color: $hh_gray;
+        padding: 5px 15px;
+        text-align: center;
+
+    }
+  .about-header {
+    // width: 75%;
+    // h3 {
+    //   font-weight: 900;
+    //   font-size: 24px;
+    //   background-color: $hh_gray;
+    //   padding: 5px;
+    //   color: #CC6633;
+    // }
+    #logo {
+      content: url('http://res.cloudinary.com/hgahynedu/image/upload/v1428450621/hh_logo_ghtsea.png');
+      height: 100px;
+      margin: 0 auto;
+    }
+  }
+
+  .fa-heart {
+    color: $hh_red;
+  }
+
+  .about-content {
+    min-height: 100px;
+    margin: 20px auto 50px auto;
+    font-size: 16px;
+    width: 85%;
+
+      #promo-video {
+        display: none;
+      }
+
+    .contact-info {
+      text-align: center;
+
+      .fa-heart {
+        padding: 10px 25px 0 25px;
+      }
+    }
+
+
+  }
+
+  .about-all-members {
+  }
+
+  .about-member {
+    width: 100%;
+    margin: 0 auto 50px auto;
+
+    p {
+    }
+  }
+
+
+  .name, .name2 {
+    font-weight: 900;
+    display: inline-block;
+    font-size: 24px;
+    position: absolute;
+    background-color: $hh_gray;
+    padding: 5px;
+    color: $hh_orange;
+  }
+
+  .name {
+    top: -10px;
+    left: -10px;
+  }
+
+  .name2 {
+    bottom: -10px;
+    right: -10px;
+  }
+
+  // .heart-container {
+  //   position:relative;
+  //   .name {
+  //       font-size: 15px;
+  //       color: $hh_red;
+  //       font-weight: bold;
+  //       -webkit-transform: rotate(-45deg);
+  //       -moz-transform: rotate(-45deg);
+  //       -ms-transform: rotate(-45deg);
+  //       -o-transform: rotate(-45deg);
+  //       transform: rotate(-45deg);
+  //     }
+  // }
+}
+
+
+
+@media all and (min-width: 500px) {
+  
+  .about-container {
+    padding: 50px;
+
+    .about-content {
+      #promo-video {
+        display: block;
+      }
+    }
+
+    .about-member {
+      width: 100%;
+      text-align: center;
+
+      p {
+        display: inline-block;
+        width: 40%;
+        vertical-align: top;
+        margin: 0 10px;
+        text-align: left;
+      }
+
+      .img {
+        display: inline-block;
+        width: 25%;
+        margin: 0 10px;
+
+      }
+    }
+
+    .right {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;  
+      flex-direction: row;
+      justify-content: center;
+
+      p {
+        order: 1
+      }
+
+      .img {
+        order: 2;
+      }
+    }
+
+  }
+}

@@ -21,7 +21,7 @@ angular.module('heartHammerApp', [
       })
       .state('about', {
         url: '/about',
-        templateUrl: 'app/about/about.html',
+        templateUrl: 'app/about/about.deprecated.html',
         controller: 'AboutCtrl'
       })
       .state('missions', {
