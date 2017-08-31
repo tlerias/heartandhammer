@@ -35,9 +35,10 @@ var all = {
   // MongoDB connection options
   mongo: {
     options: {
-      db: {
-        safe: true
-      }
+      useMongoClient: true,
+      keepAlive: 300000,
+      connectTimeoutMS: 30000,
+      safe: true,
     }
   },
 
